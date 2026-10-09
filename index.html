@@ -9,13 +9,14 @@
   <style>
     body { background-color: #0c0a13; color: #ffffff; font-family: system-ui, sans-serif; }
     .game-card { background: linear-gradient(180deg, #181326 0%, #100d1a 100%); border: 1px solid #29203f; transition: all 0.2s ease; }
-    .game-card:hover { transform: translateY(-3px); border-color: #a855f7; box-shadow: 0 4px 20px rgba(168, 85, 247, 0.25); }
+    .game-card:active { transform: scale(0.96); border-color: #a855f7; }
   </style>
 </head>
 <body class="pb-28">
-  <header class="flex justify-between items-center px-4 py-3 bg-[#141021] border-b border-[#231a38] sticky top-0 z-40">
+
+  <header class="flex justify-between items-center px-4 py-3 bg-[#141021] border-b border-[#231a38] sticky top-0 z-30">
     <div class="flex items-center gap-2">
-      <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-purple-600 to-amber-400 flex items-center justify-center font-black text-white text-sm">🦌</div>
+      <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-purple-600 to-amber-400 flex items-center justify-center font-black text-white text-sm shadow-md">🦌</div>
       <div>
         <h1 class="font-extrabold text-sm tracking-wider uppercase">SANGAI <span class="text-purple-400">STORE</span></h1>
         <p class="text-[9px] text-amber-400 font-bold uppercase">Lowest Price Guarantee</p>
@@ -35,201 +36,157 @@
       <input id="searchInput" type="text" placeholder="Search by game name..." class="w-full bg-[#181326] border border-[#2e234a] rounded-2xl px-4 py-3 text-sm focus:outline-none focus:border-purple-500 text-white placeholder-zinc-500">
     </div>
 
+    <!-- Games Grid -->
     <div id="gamesGrid" class="grid grid-cols-3 gap-3">
-      <div onclick="openOrderModal('MOBILE LEGEND (INDIA)', '₹89 (86💎) / ₹149 (Pass)')" class="game-card rounded-2xl overflow-hidden flex flex-col cursor-pointer relative group">
-        <span class="absolute top-1.5 left-1.5 bg-amber-500 text-[9px] font-black px-1.5 py-0.5 rounded text-black uppercase">India</span>
-        <div class="h-28 w-full bg-zinc-800"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400" alt="MLBB" class="w-full h-full object-cover"></div>
-        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase">MLBB (INDIA)</p>
-        <span class="text-[9px] text-center pb-2 text-amber-400 font-extrabold">FROM ₹89</span>
-      </div>
+      <button type="button" onclick="openOrderModal('MOBILE LEGEND (INDIA)', '₹89 (86💎) / ₹149 (Pass)')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-amber-500 text-[9px] font-black px-1.5 py-0.5 rounded text-black uppercase z-10 pointer-events-none">India</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400" alt="MLBB" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">MLBB (INDIA)</p>
+        <span class="text-[9px] text-center pb-2 text-amber-400 font-extrabold pointer-events-none">FROM ₹89</span>
+      </button>
 
-      <div onclick="openOrderModal('MOBILE LEGEND SMALL PACKS (INDIA)', '₹15 (11💎)')" class="game-card rounded-2xl overflow-hidden flex flex-col cursor-pointer relative group">
-        <span class="absolute top-1.5 left-1.5 bg-rose-500 text-[9px] font-black px-1.5 py-0.5 rounded text-white uppercase">Popular</span>
-        <div class="h-28 w-full bg-zinc-800"><img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400" alt="Small" class="w-full h-full object-cover"></div>
-        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase">MLBB SMALL PACKS</p>
-        <span class="text-[9px] text-center pb-2 text-emerald-400 font-extrabold">FROM ₹15</span>
-      </div>
+      <button type="button" onclick="openOrderModal('MOBILE LEGEND SMALL PACKS (INDIA)', '₹15 (11💎)')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-rose-500 text-[9px] font-black px-1.5 py-0.5 rounded text-white uppercase z-10 pointer-events-none">Popular</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400" alt="Small" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">MLBB SMALL PACKS</p>
+        <span class="text-[9px] text-center pb-2 text-emerald-400 font-extrabold pointer-events-none">FROM ₹15</span>
+      </button>
 
-      <div onclick="openOrderModal('BGMI (MANUAL)', '₹75 (60 UC)')" class="game-card rounded-2xl overflow-hidden flex flex-col cursor-pointer relative group">
-        <span class="absolute top-1.5 left-1.5 bg-amber-600 text-[9px] font-black px-1.5 py-0.5 rounded text-black uppercase">BGMI</span>
-        <div class="h-28 w-full bg-zinc-800"><img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=400" alt="BGMI" class="w-full h-full object-cover"></div>
-        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase">BGMI (MANUAL)</p>
-        <span class="text-[9px] text-center pb-2 text-amber-400 font-extrabold">FROM ₹75</span>
-      </div>
+      <button type="button" onclick="openOrderModal('BGMI (MANUAL)', '₹75 (60 UC)')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-amber-600 text-[9px] font-black px-1.5 py-0.5 rounded text-black uppercase z-10 pointer-events-none">BGMI</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=400" alt="BGMI" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">BGMI (MANUAL)</p>
+        <span class="text-[9px] text-center pb-2 text-amber-400 font-extrabold pointer-events-none">FROM ₹75</span>
+      </button>
 
-      <div onclick="openOrderModal('HONOR OF KINGS', '₹79 (80 Tokens)')" class="game-card rounded-2xl overflow-hidden flex flex-col cursor-pointer relative group">
-        <span class="absolute top-1.5 left-1.5 bg-orange-500 text-[9px] font-black px-1.5 py-0.5 rounded text-white uppercase">10% OFF</span>
-        <div class="h-28 w-full bg-zinc-800"><img src="https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=400" alt="HOK" class="w-full h-full object-cover"></div>
-        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase">HONOR OF KINGS</p>
-        <span class="text-[9px] text-center pb-2 text-amber-400 font-extrabold">FROM ₹79</span>
-      </div>
+      <button type="button" onclick="openOrderModal('HONOR OF KINGS', '₹79 (80 Tokens)')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-orange-500 text-[9px] font-black px-1.5 py-0.5 rounded text-white uppercase z-10 pointer-events-none">10% OFF</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=400" alt="HOK" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">HONOR OF KINGS</p>
+        <span class="text-[9px] text-center pb-2 text-amber-400 font-extrabold pointer-events-none">FROM ₹79</span>
+      </button>
 
-      <div onclick="openOrderModal('Instagram Boosting Service', '₹49 per 1k')" class="game-card rounded-2xl overflow-hidden flex flex-col cursor-pointer relative group">
-        <span class="absolute top-1.5 left-1.5 bg-pink-600 text-[9px] font-black px-1.5 py-0.5 rounded text-white uppercase">SALE</span>
-        <div class="h-28 w-full bg-zinc-800"><img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400" alt="IG" class="w-full h-full object-cover"></div>
-        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase">INSTAGRAM BOOST</p>
-        <span class="text-[9px] text-center pb-2 text-emerald-400 font-extrabold">FROM ₹49</span>
-      </div>
+      <button type="button" onclick="openOrderModal('Instagram Boosting Service', '₹49 per 1k')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-pink-600 text-[9px] font-black px-1.5 py-0.5 rounded text-white uppercase z-10 pointer-events-none">SALE</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400" alt="IG" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">INSTAGRAM BOOST</p>
+        <span class="text-[9px] text-center pb-2 text-emerald-400 font-extrabold pointer-events-none">FROM ₹49</span>
+      </button>
 
-      <div onclick="openOrderModal('STARLIGHT CARD PRE-ORDER', '₹299')" class="game-card rounded-2xl overflow-hidden flex flex-col cursor-pointer relative group">
-        <span class="absolute top-1.5 left-1.5 bg-purple-600 text-[9px] font-black px-1.5 py-0.5 rounded text-white uppercase">ACTIVE</span>
-        <div class="h-28 w-full bg-zinc-800"><img src="https://images.unsplash.com/photo-1563089145-599997674d42?w=400" alt="Starlight" class="w-full h-full object-cover"></div>
-        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase">STARLIGHT PRE-ORDER</p>
-        <span class="text-[9px] text-center pb-2 text-purple-400 font-extrabold">₹299 ONLY</span>
-      </div>
+      <button type="button" onclick="openOrderModal('STARLIGHT CARD PRE-ORDER', '₹299')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-purple-600 text-[9px] font-black px-1.5 py-0.5 rounded text-white uppercase z-10 pointer-events-none">ACTIVE</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1563089145-599997674d42?w=400" alt="Starlight" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">STARLIGHT PRE-ORDER</p>
+        <span class="text-[9px] text-center pb-2 text-purple-400 font-extrabold pointer-events-none">₹299 ONLY</span>
+      </button>
 
-      <div onclick="openOrderModal('GENSHIN IMPACT', 'Cheapest Welkin')" class="game-card rounded-2xl overflow-hidden flex flex-col cursor-pointer relative group">
-        <span class="absolute top-1.5 left-1.5 bg-teal-500 text-[9px] font-black px-1.5 py-0.5 rounded text-black uppercase">ACTIVE</span>
-        <div class="h-28 w-full bg-zinc-800"><img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=400" alt="Genshin" class="w-full h-full object-cover"></div>
-        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase">GENSHIN IMPACT</p>
-        <span class="text-[9px] text-center pb-2 text-teal-400 font-extrabold">CHEAP PACKS</span>
-      </div>
+      <button type="button" onclick="openOrderModal('GENSHIN IMPACT', 'Cheapest Welkin')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-teal-500 text-[9px] font-black px-1.5 py-0.5 rounded text-black uppercase z-10 pointer-events-none">ACTIVE</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=400" alt="Genshin" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">GENSHIN IMPACT</p>
+        <span class="text-[9px] text-center pb-2 text-teal-400 font-extrabold pointer-events-none">CHEAP PACKS</span>
+      </button>
 
-      <div onclick="openOrderModal('PUBG (GLOBAL)', '₹85 (60 UC)')" class="game-card rounded-2xl overflow-hidden flex flex-col cursor-pointer relative group">
-        <span class="absolute top-1.5 left-1.5 bg-emerald-500 text-[9px] font-black px-1.5 py-0.5 rounded text-black uppercase">GLOBAL</span>
-        <div class="h-28 w-full bg-zinc-800"><img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=400" alt="PUBG" class="w-full h-full object-cover"></div>
-        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase">PUBG (GLOBAL)</p>
-        <span class="text-[9px] text-center pb-2 text-emerald-400 font-extrabold">FROM ₹85</span>
-      </div>
+      <button type="button" onclick="openOrderModal('PUBG (GLOBAL)', '₹85 (60 UC)')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-emerald-500 text-[9px] font-black px-1.5 py-0.5 rounded text-black uppercase z-10 pointer-events-none">GLOBAL</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=400" alt="PUBG" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">PUBG (GLOBAL)</p>
+        <span class="text-[9px] text-center pb-2 text-emerald-400 font-extrabold pointer-events-none">FROM ₹85</span>
+      </button>
 
-      <div onclick="openOrderModal('HONKAI STAR RAIL', 'Express Supply')" class="game-card rounded-2xl overflow-hidden flex flex-col cursor-pointer relative group">
-        <span class="absolute top-1.5 left-1.5 bg-orange-500 text-[9px] font-black px-1.5 py-0.5 rounded text-white uppercase">10% OFF</span>
-        <div class="h-28 w-full bg-zinc-800"><img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=400" alt="HSR" class="w-full h-full object-cover"></div>
-        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase">HONKAI STAR RAIL</p>
-        <span class="text-[9px] text-center pb-2 text-amber-400 font-extrabold">SAVE 15%</span>
-      </div>
+      <button type="button" onclick="openOrderModal('HONKAI STAR RAIL', 'Express Supply')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-orange-500 text-[9px] font-black px-1.5 py-0.5 rounded text-white uppercase z-10 pointer-events-none">10% OFF</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=400" alt="HSR" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">HONKAI STAR RAIL</p>
+        <span class="text-[9px] text-center pb-2 text-amber-400 font-extrabold pointer-events-none">SAVE 15%</span>
+      </button>
 
-      <div onclick="openOrderModal('MLBB INDONESIA', 'Direct Server')" class="game-card rounded-2xl overflow-hidden flex flex-col cursor-pointer relative group">
-        <span class="absolute top-1.5 left-1.5 bg-zinc-800 text-[9px] font-black px-1.5 py-0.5 rounded text-white">🇮🇩 INDO</span>
-        <div class="h-28 w-full bg-zinc-800"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400" alt="MLBB Indo" class="w-full h-full object-cover"></div>
-        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase">MLBB INDONESIA</p>
-        <span class="text-[9px] text-center pb-2 text-amber-400 font-extrabold">CHEAP RATE</span>
-      </div>
+      <button type="button" onclick="openOrderModal('MLBB INDONESIA', 'Direct Server')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-zinc-800 text-[9px] font-black px-1.5 py-0.5 rounded text-white z-10 pointer-events-none">🇮🇩 INDO</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400" alt="MLBB Indo" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">MLBB INDONESIA</p>
+        <span class="text-[9px] text-center pb-2 text-amber-400 font-extrabold pointer-events-none">CHEAP RATE</span>
+      </button>
 
-      <div onclick="openOrderModal('YOUTUBE SUBSCRIBERS', '₹199 per 1k')" class="game-card rounded-2xl overflow-hidden flex flex-col cursor-pointer relative group">
-        <span class="absolute top-1.5 left-1.5 bg-red-600 text-[9px] font-black px-1.5 py-0.5 rounded text-white uppercase">ACTIVE</span>
-        <div class="h-28 w-full bg-zinc-800"><img src="https://images.unsplash.com/photo-1611162616091-635658f3b22e?w=400" alt="YT" class="w-full h-full object-cover"></div>
-        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase">YOUTUBE SUBS</p>
-        <span class="text-[9px] text-center pb-2 text-emerald-400 font-extrabold">FROM ₹199</span>
-      </div>
+      <button type="button" onclick="openOrderModal('YOUTUBE SUBSCRIBERS', '₹199 per 1k')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-red-600 text-[9px] font-black px-1.5 py-0.5 rounded text-white uppercase z-10 pointer-events-none">ACTIVE</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1611162616091-635658f3b22e?w=400" alt="YT" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">YOUTUBE SUBS</p>
+        <span class="text-[9px] text-center pb-2 text-emerald-400 font-extrabold pointer-events-none">FROM ₹199</span>
+      </button>
 
-      <div onclick="openOrderModal('MLBB PHILIPPINES', 'PH Server')" class="game-card rounded-2xl overflow-hidden flex flex-col cursor-pointer relative group">
-        <span class="absolute top-1.5 left-1.5 bg-zinc-800 text-[9px] font-black px-1.5 py-0.5 rounded text-white">🇵🇭 PH</span>
-        <div class="h-28 w-full bg-zinc-800"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400" alt="MLBB PH" class="w-full h-full object-cover"></div>
-        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase">MLBB PHILIPPINES</p>
-        <span class="text-[9px] text-center pb-2 text-amber-400 font-extrabold">INSTANT</span>
-      </div>
+      <button type="button" onclick="openOrderModal('MLBB PHILIPPINES', 'PH Server')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-zinc-800 text-[9px] font-black px-1.5 py-0.5 rounded text-white z-10 pointer-events-none">🇵🇭 PH</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400" alt="MLBB PH" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">MLBB PHILIPPINES</p>
+        <span class="text-[9px] text-center pb-2 text-amber-400 font-extrabold pointer-events-none">INSTANT</span>
+      </button>
 
-      <div onclick="openOrderModal('MLBB MALAYSIA & SINGAPORE', 'MY/SG Server')" class="game-card rounded-2xl overflow-hidden flex flex-col cursor-pointer relative group">
-        <span class="absolute top-1.5 left-1.5 bg-zinc-800 text-[9px] font-black px-1.5 py-0.5 rounded text-white">🇲🇾 🇸🇬 MY/SG</span>
-        <div class="h-28 w-full bg-zinc-800"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400" alt="MLBB MY" class="w-full h-full object-cover"></div>
-        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase">MLBB MALAYSIA/SG</p>
-        <span class="text-[9px] text-center pb-2 text-amber-400 font-extrabold">FAST TOP-UP</span>
-      </div>
+      <button type="button" onclick="openOrderModal('MLBB MALAYSIA & SINGAPORE', 'MY/SG Server')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-zinc-800 text-[9px] font-black px-1.5 py-0.5 rounded text-white z-10 pointer-events-none">🇲🇾 🇸🇬 MY/SG</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400" alt="MLBB MY" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">MLBB MALAYSIA/SG</p>
+        <span class="text-[9px] text-center pb-2 text-amber-400 font-extrabold pointer-events-none">FAST TOP-UP</span>
+      </button>
 
-      <div onclick="openOrderModal('MLBB (RUSSIA)', 'RU Server')" class="game-card rounded-2xl overflow-hidden flex flex-col cursor-pointer relative group">
-        <span class="absolute top-1.5 left-1.5 bg-zinc-800 text-[9px] font-black px-1.5 py-0.5 rounded text-white">🇷🇺 RU</span>
-        <div class="h-28 w-full bg-zinc-800"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400" alt="MLBB RU" class="w-full h-full object-cover"></div>
-        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase">MLBB (RUSSIA)</p>
-        <span class="text-[9px] text-center pb-2 text-amber-400 font-extrabold">CHEAP PACKS</span>
-      </div>
+      <button type="button" onclick="openOrderModal('MLBB (RUSSIA)', 'RU Server')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-zinc-800 text-[9px] font-black px-1.5 py-0.5 rounded text-white z-10 pointer-events-none">🇷🇺 RU</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400" alt="MLBB RU" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">MLBB (RUSSIA)</p>
+        <span class="text-[9px] text-center pb-2 text-amber-400 font-extrabold pointer-events-none">CHEAP PACKS</span>
+      </button>
 
-      <div onclick="openOrderModal('FLASH SALE (INDIA REGION)', 'Special Deal')" class="game-card rounded-2xl overflow-hidden flex flex-col cursor-pointer relative group">
-        <span class="absolute top-1.5 left-1.5 bg-amber-400 text-[9px] font-black px-1.5 py-0.5 rounded text-black uppercase">⚡ FLASH</span>
-        <div class="h-28 w-full bg-zinc-800"><img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=400" alt="Flash" class="w-full h-full object-cover"></div>
-        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase">FLASH SALE (INDIA)</p>
-        <span class="text-[9px] text-center pb-2 text-emerald-400 font-extrabold">EXTRA 5% OFF</span>
-      </div>
+      <button type="button" onclick="openOrderModal('FLASH SALE (INDIA REGION)', 'Special Deal')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-amber-400 text-[9px] font-black px-1.5 py-0.5 rounded text-black uppercase z-10 pointer-events-none">⚡ FLASH</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=400" alt="Flash" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">FLASH SALE (INDIA)</p>
+        <span class="text-[9px] text-center pb-2 text-emerald-400 font-extrabold pointer-events-none">EXTRA 5% OFF</span>
+      </button>
 
-      <div onclick="openOrderModal('Magic Chess: Go Go', 'Launch Price')" class="game-card rounded-2xl overflow-hidden flex flex-col cursor-pointer relative group">
-        <span class="absolute top-1.5 left-1.5 bg-indigo-500 text-[9px] font-black px-1.5 py-0.5 rounded text-white uppercase">NEW</span>
-        <div class="h-28 w-full bg-zinc-800"><img src="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=400" alt="MC" class="w-full h-full object-cover"></div>
-        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase">MAGIC CHESS</p>
-        <span class="text-[9px] text-center pb-2 text-indigo-400 font-extrabold">ACTIVE</span>
-      </div>
+      <button type="button" onclick="openOrderModal('Magic Chess: Go Go', 'Launch Price')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-indigo-500 text-[9px] font-black px-1.5 py-0.5 rounded text-white uppercase z-10 pointer-events-none">NEW</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=400" alt="MC" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">MAGIC CHESS</p>
+        <span class="text-[9px] text-center pb-2 text-indigo-400 font-extrabold pointer-events-none">ACTIVE</span>
+      </button>
 
-      <div onclick="openOrderModal('EA SPORT FC MOBILE', 'Cheap Points')" class="game-card rounded-2xl overflow-hidden flex flex-col cursor-pointer relative group">
-        <span class="absolute top-1.5 left-1.5 bg-green-500 text-[9px] font-black px-1.5 py-0.5 rounded text-black uppercase">FC</span>
-        <div class="h-28 w-full bg-zinc-800"><img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=400" alt="FC" class="w-full h-full object-cover"></div>
-        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase">EA FC MOBILE</p>
-        <span class="text-[9px] text-center pb-2 text-emerald-400 font-extrabold">BEST PRICE</span>
-      </div>
+      <button type="button" onclick="openOrderModal('EA SPORT FC MOBILE', 'Cheap Points')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-green-500 text-[9px] font-black px-1.5 py-0.5 rounded text-black uppercase z-10 pointer-events-none">FC</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=400" alt="FC" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">EA FC MOBILE</p>
+        <span class="text-[9px] text-center pb-2 text-emerald-400 font-extrabold pointer-events-none">BEST PRICE</span>
+      </button>
 
-      <div onclick="openOrderModal('Revelation Mobile', '15% Off')" class="game-card rounded-2xl overflow-hidden flex flex-col cursor-pointer relative group">
-        <span class="absolute top-1.5 left-1.5 bg-orange-500 text-[9px] font-black px-1.5 py-0.5 rounded text-white uppercase">15% OFF</span>
-        <div class="h-28 w-full bg-zinc-800"><img src="https://images.unsplash.com/photo-1534423861386-85a16f5d13da?w=400" alt="Revelation" class="w-full h-full object-cover"></div>
-        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase">REVELATION MOBILE</p>
-        <span class="text-[9px] text-center pb-2 text-amber-400 font-extrabold">CHEAP</span>
-      </div>
+      <button type="button" onclick="openOrderModal('Revelation Mobile', '15% Off')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-orange-500 text-[9px] font-black px-1.5 py-0.5 rounded text-white uppercase z-10 pointer-events-none">15% OFF</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1534423861386-85a16f5d13da?w=400" alt="Revelation" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">REVELATION MOBILE</p>
+        <span class="text-[9px] text-center pb-2 text-amber-400 font-extrabold pointer-events-none">CHEAP</span>
+      </button>
 
-      <div onclick="openOrderModal('AIRTEL SIM RECHARGE', 'Cashback Plan')" class="game-card rounded-2xl overflow-hidden flex flex-col cursor-pointer relative group">
-        <span class="absolute top-1.5 left-1.5 bg-red-600 text-[9px] font-black px-1.5 py-0.5 rounded text-white uppercase">ACTIVE</span>
-        <div class="h-28 w-full bg-zinc-800"><img src="https://images.unsplash.com/photo-1562774053-701939374585?w=400" alt="Airtel" class="w-full h-full object-cover"></div>
-        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase">AIRTEL RECHARGE</p>
-        <span class="text-[9px] text-center pb-2 text-red-400 font-extrabold">ALL PLANS</span>
-      </div>
+      <button type="button" onclick="openOrderModal('AIRTEL SIM RECHARGE', 'Cashback Plan')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-red-600 text-[9px] font-black px-1.5 py-0.5 rounded text-white uppercase z-10 pointer-events-none">ACTIVE</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1562774053-701939374585?w=400" alt="Airtel" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">AIRTEL RECHARGE</p>
+        <span class="text-[9px] text-center pb-2 text-red-400 font-extrabold pointer-events-none">ALL PLANS</span>
+      </button>
 
-      <div onclick="openOrderModal('JIO RECHARGE', 'Cashback Plan')" class="game-card rounded-2xl overflow-hidden flex flex-col cursor-pointer relative group">
-        <span class="absolute top-1.5 left-1.5 bg-blue-600 text-[9px] font-black px-1.5 py-0.5 rounded text-white uppercase">ACTIVE</span>
-        <div class="h-28 w-full bg-zinc-800"><img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=400" alt="Jio" class="w-full h-full object-cover"></div>
-        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase">JIO RECHARGE</p>
-        <span class="text-[9px] text-center pb-2 text-blue-400 font-extrabold">ALL PLANS</span>
-      </div>
+      <button type="button" onclick="openOrderModal('JIO RECHARGE', 'Cashback Plan')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-blue-600 text-[9px] font-black px-1.5 py-0.5 rounded text-white uppercase z-10 pointer-events-none">ACTIVE</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=400" alt="Jio" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">JIO RECHARGE</p>
+        <span class="text-[9px] text-center pb-2 text-blue-400 font-extrabold pointer-events-none">ALL PLANS</span>
+      </button>
 
-      <div onclick="openOrderModal('WEEKLY PASS COMBO (INDIA)', 'Combo Pack')" class="game-card rounded-2xl overflow-hidden flex flex-col cursor-pointer relative group">
-        <span class="absolute top-1.5 left-1.5 bg-purple-500 text-[9px] font-black px-1.5 py-0.5 rounded text-white uppercase">BEST COMBO</span>
-        <div class="h-28 w-full bg-zinc-800"><img src="https://images.unsplash.com/photo-1563089145-599997674d42?w=400" alt="Pass Combo" class="w-full h-full object-cover"></div>
-        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase">WEEKLY PASS COMBO</p>
-        <span class="text-[9px] text-center pb-2 text-purple-400 font-extrabold">FROM ₹295</span>
-      </div>
+      <button type="button" onclick="openOrderModal('WEEKLY PASS COMBO (INDIA)', 'Combo Pack')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-purple-500 text-[9px] font-black px-1.5 py-0.5 rounded text-white uppercase z-10 pointer-events-none">BEST COMBO</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1563089145-599997674d42?w=400" alt="Pass Combo" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">WEEKLY PASS COMBO</p>
+        <span class="text-[9px] text-center pb-2 text-purple-400 font-extrabold pointer-events-none">FROM ₹295</span>
+      </button>
 
-      <div onclick="openOrderModal('MLBB (TURKEY)', 'TR Server')" class="game-card rounded-2xl overflow-hidden flex flex-col cursor-pointer relative group">
-        <span class="absolute top-1.5 left-1.5 bg-zinc-800 text-[9px] font-black px-1.5 py-0.5 rounded text-white">🇹🇷 TR</span>
-        <div class="h-28 w-full bg-zinc-800"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400" alt="MLBB TR" class="w-full h-full object-cover"></div>
-        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase">MLBB (TURKEY)</p>
-        <span class="text-[9px] text-center pb-2 text-amber-400 font-extrabold">BEST RATE</span>
-      </div>
-    </div>
-  </main>
-
-  <div id="orderModal" class="fixed inset-0 bg-black/85 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-[#181326] border border-[#2e234a] rounded-2xl w-full max-w-sm p-5 relative">
-      <button onclick="closeOrderModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white text-lg">✕</button>
-      <h3 id="modalGameTitle" class="text-base font-extrabold text-purple-300 uppercase mb-1">Top-Up</h3>
-      <p id="modalDefaultPrice" class="text-xs text-emerald-400 font-semibold mb-4"></p>
-      <div class="space-y-3">
-        <input id="userIdInput" type="text" placeholder="Player ID / Account No" class="w-full bg-[#100d1a] border border-zinc-700 rounded-xl px-3 py-2 text-sm text-white focus:outline-none">
-        <input id="zoneIdInput" type="text" placeholder="Zone ID (If applicable)" class="w-full bg-[#100d1a] border border-zinc-700 rounded-xl px-3 py-2 text-sm text-white focus:outline-none">
-        <select id="packSelect" class="w-full bg-[#100d1a] border border-zinc-700 rounded-xl px-3 py-2 text-sm text-white focus:outline-none">
-          <option value="Weekly Diamond Pass - ₹149">Weekly Diamond Pass — ₹149</option>
-          <option value="86 Diamonds - ₹89">86 Diamonds — ₹89</option>
-          <option value="172 Diamonds - ₹175">172 Diamonds — ₹175</option>
-          <option value="257 Diamonds - ₹259">257 Diamonds — ₹259</option>
-          <option value="706 Diamonds - ₹699">706 Diamonds — ₹699</option>
-          <option value="Custom / Other">Other Pack (Enquire on WhatsApp)</option>
-        </select>
-        <button onclick="submitOrderWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 rounded-xl text-sm flex items-center justify-center gap-2 mt-4 shadow-lg">
-          <i class="fa-brands fa-whatsapp text-lg"></i> Send Order to WhatsApp
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    const searchInput = document.getElementById('searchInput');
-    const cards = document.querySelectorAll('#gamesGrid .game-card');
-    searchInput.addEventListener('input', (e) => {
-      const q = e.target.value.toLowerCase().trim();
-      cards.forEach(c => {
-        c.style.display = c.querySelector('p').textContent.toLowerCase().includes(q) ? 'flex' : 'none';
-      });
-    });
-
-    let selectedGame = '';
-    function openOrderModal(g, p) {
-      selectedGame = g;
-      document.getElementById('modalGameTitle').textContent = g;
-      document.getElementById('modalDefaultPrice').textContent = p ? `Rate: ${p}` : '';
-      document.getElementById('orderModal').classList.remove('hidden');
-    }
-    function closeOrderModal() { document.getElementById('orderMod
+      <button type="button" onclick="openOrderModal('MLBB (TURKEY)', 'TR Server')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-zinc-800 text-[9px] font-black px-1.5 py-0.5 rounded text-white z-10 pointer-events-none">🇹🇷 TR</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400" alt="MLBB TR" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">MLBB (TURKEY)</p>
+        <span class="text-[9px] text-center pb-2 text-
