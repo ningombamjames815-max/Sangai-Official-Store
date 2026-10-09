@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sangai Official Store - Cheapest Game Top-Up</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { background-color: #0c0a13; color: #ffffff; font-family: system-ui, sans-serif; }
+    .game-card { background: linear-gradient(180deg, #181326 0%, #100d1a 100%); border: 1px solid #29203f; transition: all 0.2s ease; }
+    .game-card:active { transform: scale(0.96); border-color: #a855f7; }
+  </style>
+</head>
+<body class="pb-28">
+
+  <header class="flex justify-between items-center px-4 py-3 bg-[#141021] border-b border-[#231a38] sticky top-0 z-30">
+    <div class="flex items-center gap-2">
+      <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-purple-600 to-amber-400 flex items-center justify-center font-black text-white text-sm shadow-md">🦌</div>
+      <div>
+        <h1 class="font-extrabold text-sm tracking-wider uppercase">SANGAI <span class="text-purple-400">STORE</span></h1>
+        <p class="text-[9px] text-amber-400 font-bold uppercase">Lowest Price Guarantee</p>
+      </div>
+    </div>
+    <a href="https://wa.me/916909729845" target="_blank" class="bg-[#211938] px-3 py-1.5 rounded-xl flex items-center gap-2 border border-purple-500/30 text-xs font-semibold text-emerald-400">
+      <i class="fa-brands fa-whatsapp text-sm"></i><span>6909729845</span>
+    </a>
+  </header>
+
+  <div class="bg-purple-950/60 border-b border-purple-500/20 px-4 py-2 text-center">
+    <p class="text-[11px] text-zinc-300">🔥 <span class="text-amber-400 font-bold">Cheapest Rates:</span> MLBB Pass @ ₹149 | 86💎 @ ₹89 | Instant Delivery!</p>
+  </div>
+
+  <main class="max-w-md mx-auto px-4 mt-4">
+    <div class="mb-5">
+      <input id="searchInput" type="text" placeholder="Search by game name..." class="w-full bg-[#181326] border border-[#2e234a] rounded-2xl px-4 py-3 text-sm focus:outline-none focus:border-purple-500 text-white placeholder-zinc-500">
+    </div>
+
+    <div id="gamesGrid" class="grid grid-cols-3 gap-3">
+      <button type="button" onclick="openOrderModal('MOBILE LEGEND (INDIA)', '₹89 (86💎) / ₹149 (Pass)')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-amber-500 text-[9px] font-black px-1.5 py-0.5 rounded text-black uppercase z-10 pointer-events-none">India</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400" alt="MLBB" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">MLBB (INDIA)</p>
+        <span class="text-[9px] text-center pb-2 text-amber-400 font-extrabold pointer-events-none">FROM ₹89</span>
+      </button>
+
+      <button type="button" onclick="openOrderModal('MOBILE LEGEND SMALL PACKS (INDIA)', '₹15 (11💎)')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-rose-500 text-[9px] font-black px-1.5 py-0.5 rounded text-white uppercase z-10 pointer-events-none">Popular</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400" alt="Small" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">MLBB SMALL PACKS</p>
+        <span class="text-[9px] text-center pb-2 text-emerald-400 font-extrabold pointer-events-none">FROM ₹15</span>
+      </button>
+
+      <button type="button" onclick="openOrderModal('BGMI (MANUAL)', '₹75 (60 UC)')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-amber-600 text-[9px] font-black px-1.5 py-0.5 rounded text-black uppercase z-10 pointer-events-none">BGMI</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=400" alt="BGMI" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">BGMI (MANUAL)</p>
+        <span class="text-[9px] text-center pb-2 text-amber-400 font-extrabold pointer-events-none">FROM ₹75</span>
+      </button>
+
+      <button type="button" onclick="openOrderModal('HONOR OF KINGS', '₹79 (80 Tokens)')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-orange-500 text-[9px] font-black px-1.5 py-0.5 rounded text-white uppercase z-10 pointer-events-none">10% OFF</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=400" alt="HOK" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">HONOR OF KINGS</p>
+        <span class="text-[9px] text-center pb-2 text-amber-400 font-extrabold pointer-events-none">FROM ₹79</span>
+      </button>
+
+      <button type="button" onclick="openOrderModal('Instagram Boosting Service', '₹49 per 1k')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-pink-600 text-[9px] font-black px-1.5 py-0.5 rounded text-white uppercase z-10 pointer-events-none">SALE</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400" alt="IG" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">INSTAGRAM BOOST</p>
+        <span class="text-[9px] text-center pb-2 text-emerald-400 font-extrabold pointer-events-none">FROM ₹49</span>
+      </button>
+
+      <button type="button" onclick="openOrderModal('STARLIGHT CARD PRE-ORDER', '₹299')" class="game-card rounded-2xl overflow-hidden flex flex-col text-left relative cursor-pointer focus:outline-none">
+        <span class="absolute top-1.5 left-1.5 bg-purple-600 text-[9px] font-black px-1.5 py-0.5 rounded text-white uppercase z-10 pointer-events-none">ACTIVE</span>
+        <div class="h-28 w-full bg-zinc-800 pointer-events-none"><img src="https://images.unsplash.com/photo-1563089145-599997674d42?w=400" alt="Starlight" class="w-full h-full object-cover"></div>
+        <p class="text-[10px] font-bold text-center pt-2 px-1 uppercase pointer-events-none">STARLIGHT PRE-ORDER</p>
+        <span class="text-[9px] text-center pb-2 text-purple-400 font-extrabold pointer-events-none">₹299 ONLY</span>
+      </button>
+    </div>
+  </main>
+
+  <!-- Modal Popup -->
+  <div id="orderModal" class="fixed inset-0 bg-black/85 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-[#181326] border border-[#2e234a] rounded-2xl w-full max-w-sm p-5 relative shadow-2xl">
+      <button type="button" onclick="closeOrderModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white text-xl">✕</button>
+      <h3 id="modalGameTitle" class="text-base font-extrabold text-purple-300 uppercase mb-1">Top-Up</h3>
+      <p id="modalDefaultPrice" class="text-xs text-emerald-400 font-semibold mb-4"></p>
+      
+      <div class="space-y-3">
+        <input id="userIdInput" type="text" placeholder="Player ID / Account No *" class="w-full bg-[#100d1a] border border-zinc-700 rounded-xl px-3 py-2 text-sm text-white focus:outline-none">
+        <input id="zoneIdInput" type="text" placeholder="Zone ID (If applicable)" class="w-full bg-[#100d1a] border border-zinc-700 rounded-xl px-3 py-2 text-sm text-white focus:outline-none">
+        
+        <select id="packSelect" class="w-full bg-[#100d1a] border border-zinc-700 rounded-xl px-3 py-2 text-sm text-white focus:outline-none">
+          <option value="Weekly Diamond Pass - ₹149">Weekly Diamond Pass — ₹149</option>
+          <option value="86 Diamonds - ₹89">86 Diamonds — ₹89</option>
+          <option value="172 Diamonds - ₹175">172 Diamonds — ₹175</option>
+          <option value="257 Diamonds - ₹259">257 Diamonds — ₹259</option>
+          <option value="706 Diamonds - ₹699">706 Diamonds — ₹699</option>
+          <option value="Custom / Other">Other Pack (Enquire on WhatsApp)</option>
+        </select>
+        
+        <button type="button" onclick="submitOrderWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 rounded-xl text-sm flex items-center justify-center gap-2 mt-4 shadow-lg">
+          <i class="fa-brands fa-whatsapp text-lg"></i> Send Order to WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let selectedGame = '';
+
+    function openOrderModal(g, p) {
+      selectedGame = g;
+      document.getElementById('modalGameTitle').textContent = g;
+      document.getElementById('modalDefaultPrice').textContent = p ? `Rate: ${p}` : '';
+      document.getElementById('orderModal').classList.remove('hidden');
+    }
+
+    function closeOrderModal() {
+      document.getElementById('orderModal').classList.add('hidden');
+    }
+
+    function submitOrderWhatsApp() {
+      const u = document.getElementById('userIdInput').value.trim();
+      const z = document.getElementById('zoneIdInput').value.trim();
+      const pk = document.getElementById('packSelect').value;
+      if (!u) { 
+        alert('Player ID / Account number hapchinbiyu!'); 
+        return; 
+      }
+      const msg = `*SANGAI OFFICIAL STORE - TOP-UP ORDER*%0A%0A🎮 *Game:* ${encodeURIComponent(selectedGame)}%0A🆔 *Player ID:* ${encodeURIComponent(u)}%0A` + (z ? `🌐 *Zone ID:* ${encodeURIComponent(z)}%0A` : '') + `📦 *Pack:* ${encodeURIComponent(pk)}`;
+      window.open(`https://wa.me/916909729845?text=${msg}`, '_blank');
+      closeOrderModal();
+    }
+
+    document.getElementById('searchInput').addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      document.querySelectorAll('#gamesGrid .game-card').forEach(c => {
+        c.style.display = c.querySelector('p').textContent.toLowerCase().includes(q) ? 'flex' : 'none';
+      });
+    });
+  </script>
+</body>
+    </html>
