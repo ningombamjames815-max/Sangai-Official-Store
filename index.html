@@ -1,7 +1,6 @@
 # Sangai-Official-Store
 Cheapest game top-up and recharge store website
-    <div class="read" style="color:#38bdf8;margin-top:8px">Read more</div>
-  <!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -21,48 +20,56 @@ body{background:#01030a;color:#fff;padding-bottom:95px}
 .avatar{width:42px;height:42px;background:#ec4899;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:bold}
 
 /* HERO / BANNER */
-.banner{margin:12px;border-radius:20px;overflow:hidden;background:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.85)),url('https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&fit=crop');background-size:cover;background-position:center;padding:16px;min-height:200px}
+.banner{margin:12px;border-radius:20px;overflow:hidden;background:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.85)),url('https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&fit=crop');background-size:cover;background-position:center;padding:16px;min-height:180px}
 .badges{display:flex;flex-wrap:wrap;gap:8px}
-.badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:8px 12px;border-radius:10px;font-size:13px}
-.banner p{margin-top:14px;font-size:14px;line-height:1.5;color:#e2e8f0}
-.banner .read{color:#38bdf8;font-size:18px;margin-top:8px;display:block}
+.badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:6px 10px;border-radius:10px;font-size:12px}
+.banner p{margin-top:12px;font-size:14px;line-height:1.5;color:#e2e8f0}
 
 /* HOME */
 .home-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;padding:10px 12px}
 @media(max-width:600px){.home-grid{grid-template-columns:1fr 1fr}}
 .game-card{background:#0f2048;border-radius:20px;padding:14px 8px;text-align:center;position:relative;border:1px solid #1e3a8a;cursor:pointer}
 .game-card .topbadge{position:absolute;top:0;left:50%;transform:translateX(-50%);background:#22c55e;color:#fff;font-size:11px;font-weight:bold;padding:4px 10px;border-radius:0 0 12px 12px;white-space:nowrap;z-index:2}
-.game-card .topbadge.orange{background:#f97316}.game-card .topbadge.pink{background:#ec4899}.game-card .topbadge.gold{background:#f59e0b;color:#000}
-.game-card .circle{width:82px;height:82px;border-radius:50%;border:3px solid #2563eb;margin:20px auto 10px;overflow:hidden;background:#fff}
+.game-card .topbadge.pink{background:#ec4899}.game-card .topbadge.orange{background:#f97316}
+.game-card .circle{width:75px;height:75px;border-radius:50%;border:3px solid #2563eb;margin:18px auto 10px;overflow:hidden;background:#fff}
 .game-card .circle img{width:100%;height:100%;object-fit:cover;display:block}
 .game-card h3{font-size:14px;line-height:1.3;min-height:36px}
-.game-card .topup{margin-top:10px;background:#2563eb;color:#fff;border:none;padding:10px 0;width:100%;border-radius:20px;font-weight:bold;cursor:pointer}
-h2{margin:18px 12px 8px;font-size:17px}
+.game-card .topup{margin-top:10px;background:#2563eb;color:#fff;border:none;padding:8px 0;width:100%;border-radius:20px;font-weight:bold;cursor:pointer}
+h2{margin:16px 12px 8px;font-size:17px}
 
 /* DETAIL */
 .detail-card{background:#071a4a;border-radius:20px;padding:16px;margin:12px;border:1px solid #1e3a8a}
-.step{display:flex;gap:10px;align-items:center;margin-bottom:14px}
-.step .num{width:42px;height:42px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#60a5fa,#1e40af);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:bold;border:2px solid #38bdf8;flex-shrink:0}
-.step h3{color:#38bdf8;font-size:17px;text-transform:uppercase}
+.step{display:flex;gap:10px;align-items:center;margin-bottom:12px}
+.step .num{width:38px;height:38px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#60a5fa,#1e40af);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:bold;border:2px solid #38bdf8;flex-shrink:0}
+.step h3{color:#38bdf8;font-size:16px;text-transform:uppercase}
 .step p{color:#94a3b8;font-size:12px}
-.detail-input{width:100%;padding:14px;margin:8px 0;background:#020617;border:1px solid #475569;border-radius:12px;color:#fff;font-size:15px;outline:none}
+.detail-input{width:100%;padding:12px 14px;margin:6px 0;background:#020617;border:1px solid #475569;border-radius:12px;color:#fff;font-size:15px;outline:none}
 .detail-input:focus{border-color:#38bdf8}
-.check-btn{width:100%;padding:14px;border:none;border-radius:12px;background:linear-gradient(90deg,#1d4ed8,#0ea5e9);color:#fff;font-size:16px;font-weight:bold;cursor:pointer;margin-top:4px}
+.check-btn{width:100%;padding:12px;border:none;border-radius:12px;background:linear-gradient(90deg,#1d4ed8,#0ea5e9);color:#fff;font-size:15px;font-weight:bold;cursor:pointer;margin-top:4px}
 .check-btn:disabled{opacity:0.6}
 
 /* PACKAGES */
 .pkg-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
-.pkg-card{background:#111c38;border-radius:14px;padding:14px 10px;text-align:center;cursor:pointer;border:2px solid #1e3a8a;display:flex;flex-direction:column;justify-content:space-between;min-height:140px}
+.pkg-card{background:#111c38;border-radius:14px;padding:12px 8px;text-align:center;cursor:pointer;border:2px solid #1e3a8a;display:flex;flex-direction:column;justify-content:space-between;min-height:130px}
 .pkg-card.selected{border-color:#38bdf8;background:#0e2a5c}
-.pkg-card b{font-size:15px;color:#e2e8f0}
-.pkg-card .p-icon{font-size:32px;margin:8px 0}
-.pkg-card .p-price{background:rgba(0,0,0,.4);padding:8px;border-radius:8px;font-size:17px;font-weight:bold;color:#38bdf8}
+.pkg-card b{font-size:14px;color:#e2e8f0}
+.pkg-card .p-icon{font-size:30px;margin:6px 0}
+.pkg-card .p-price{background:rgba(0,0,0,.4);padding:6px;border-radius:8px;font-size:16px;font-weight:bold;color:#38bdf8}
+
+/* PAYMENT / UPI METHODS */
+.pay-badges{display:flex;gap:8px;overflow-x:auto;padding-bottom:10px;margin-top:8px}
+.pay-pill{background:#0b1329;border:1px solid #334155;border-radius:12px;padding:10px 14px;display:flex;align-items:center;gap:8px;font-weight:bold;font-size:13px;white-space:nowrap;color:#e2e8f0}
+.pay-pill span{font-size:18px}
+.qr-container{background:#fff;color:#000;padding:16px;border-radius:16px;text-align:center;margin-top:12px}
+.qr-container img{width:190px;height:190px;border-radius:10px;margin:8px auto;display:block}
+.copy-box{display:flex;gap:8px;background:#f1f5f9;padding:8px 12px;border-radius:10px;align-items:center;justify-content:space-between;margin-top:10px;color:#1e293b;font-weight:bold}
+.copy-btn{background:#2563eb;color:#fff;border:none;padding:6px 14px;border-radius:8px;font-size:12px;font-weight:bold;cursor:pointer}
 
 /* SUMMARY & BUY */
 .complete-card{background:#071a4a;border-radius:20px;padding:18px;margin:12px;border:1px solid #1e3a8a}
 .complete-top{display:flex;justify-content:space-between;align-items:center}
 .amt{font-size:24px;font-weight:bold;color:#4ade80}
-.buy-btn{width:100%;padding:16px;border:none;border-radius:14px;background:#25D366;color:#fff;font-size:18px;font-weight:bold;cursor:pointer;margin-top:14px}
+.buy-btn{width:100%;padding:15px;border:none;border-radius:14px;background:#25D366;color:#fff;font-size:17px;font-weight:bold;cursor:pointer;margin-top:14px}
 .hidden{display:none}
 .back{margin:12px;background:#1e293b;padding:8px 14px;border-radius:10px;display:inline-block;cursor:pointer}
 </style>
@@ -82,10 +89,10 @@ h2{margin:18px 12px 8px;font-size:17px}
   <div class="banner">
     <div class="badges">
       <span class="badge">💬 24/7 Support</span>
-      <span class="badge">🏛️ Safe Payment</span>
+      <span class="badge">🏛️ Safe UPI Pay</span>
       <span class="badge">⚡ Instant Delivery</span>
     </div>
-    <p>Top up MLBB Diamonds, BGMI UC, and Game Passes easily!<br><b style="color:#fff">Sangai Official Store - Manipur</b></p>
+    <p>Top up MLBB Diamonds, Passes & Games safely!<br><b style="color:#fff">Sangai Official Store - Manipur</b></p>
   </div>
 
   <h2>🔥 Popular Games</h2>
@@ -115,8 +122,28 @@ h2{margin:18px 12px 8px;font-size:17px}
 <div id="detail" class="hidden">
   <div class="back" onclick="goHome()">← Back to Home</div>
 
+  <!-- STEP 1: IDs -->
   <div class="detail-card">
-    <div class="step"><div class="num">1</div><div><h3>ENTER IDS</h3><p>Enter your Game User ID & Zone ID</p></div></div>
+    <div class="step"><div class="num">1</div><div><h3>ENTER IDS</h3><p>Enter User ID & Zone ID</p></div></div>
     <input class="detail-input" id="gameId" type="text" inputmode="numeric" placeholder="Enter User ID (e.g. 12345678)">
     <input class="detail-input" id="serverId" type="text" inputmode="numeric" placeholder="Enter Zone ID (e.g. 2345)">
-    <input class="detail-input" id="ign" type
+    <input class="detail-input" id="ign" type="text" placeholder="IGN / Nickname" readonly style="background:#0b1329;color:#38bdf8;">
+    <button class="check-btn" type="button" id="btnCheck" onclick="checkName()">Check Nickname</button>
+    <p id="checkResult" style="text-align:center;margin-top:8px;font-size:13px;"></p>
+  </div>
+
+  <!-- STEP 2: PACKAGES -->
+  <div class="detail-card">
+    <div class="step"><div class="num">2</div><div><h3>CHOOSE PACKAGE</h3><p>Select Diamond / Pass</p></div></div>
+    <div class="pkg-grid">
+      <div class="pkg-card" onclick="selectPkg(this, 'Weekly Diamond Pass', 165)">
+        <b>Weekly Pass</b>
+        <div class="p-icon">🎟️</div>
+        <div class="p-price">₹165</div>
+      </div>
+      <div class="pkg-card" onclick="selectPkg(this, '86 Diamonds', 145)">
+        <b>86 Diamonds</b>
+        <div class="p-icon">💎</div>
+        <div class="p-price">₹145</div>
+      </div>
+      <div class="pkg-card" onclick="selectPkg(this, '172 Diamonds', 290)">
