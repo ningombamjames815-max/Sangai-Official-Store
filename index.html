@@ -1,247 +1,95 @@
-<!-- ================= CARD COMPONENT ================= -->
-<div class="service-card">
-  <div class="card-badge">HOT DEAL</div>
-  <div class="card-icon">❤️</div>
-  <h3>Instagram Likes</h3>
-  <p>High quality & instant delivery packs</p>
+<!-- ================= COMPLETE WORKING COMPONENT ================= -->
+<div style="padding: 20px; display: flex; justify-content: center; font-family: sans-serif;">
   
-  <!-- Nambiriba Button asini -->
-  <button class="topup-btn" onclick="openPacksModal('ig_likes')">
-    Top Up <span>&rarr;</span>
-  </button>
-</div>
+  <!-- CARD -->
+  <div style="background: #18191f; border: 1px solid #2f3542; border-radius: 14px; padding: 20px; width: 260px; text-align: center; color: #fff;">
+    <div style="font-size: 32px; margin-bottom: 8px;">❤️</div>
+    <h3 style="margin: 0 0 6px 0;">Instagram Likes</h3>
+    <p style="color: #888; font-size: 13px; margin-bottom: 16px;">Instant delivery packs</p>
+    
+    <!-- DIRECT CLICK BUTTON -->
+    <button 
+      id="openBtn" 
+      type="button" 
+      style="width: 100%; padding: 12px; background: #e84118; color: #fff; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; position: relative; z-index: 10;">
+      Top Up &rarr;
+    </button>
+  </div>
 
-<!-- ================= PACKS MODAL / POPUP ================= -->
-<div id="packsModal" class="modal-overlay" onclick="closeOnBackdrop(event)">
-  <div class="modal-content">
-    <div class="modal-header">
-      <div>
-        <h4 id="modalTitle">Select a Pack</h4>
-        <p class="modal-sub">Choose your desired amount below</p>
+  <!-- POPUP / MODAL (DEFAULT HIDDEN) -->
+  <div id="modalBox" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.8); z-index: 999999; justify-content: center; align-items: center;">
+    
+    <div style="background: #20222a; border-radius: 12px; width: 90%; max-width: 360px; padding: 20px; color: #fff; border: 1px solid #333;">
+      
+      <!-- HEADER -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+        <h4 style="margin: 0; font-size: 16px;">Select Pack</h4>
+        <span id="closeBtn" style="font-size: 22px; cursor: pointer; color: #aaa;">&times;</span>
       </div>
-      <button class="close-btn" onclick="closeModal()">&times;</button>
-    </div>
 
-    <!-- Packs asina dynamic oina Javascript tagi render twrakkani -->
-    <div id="packsContainer" class="packs-grid"></div>
+      <!-- PACKS LIST -->
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div onclick="selectItem('100 Likes - ₹15')" style="padding: 12px; background: #2c2f38; border-radius: 8px; cursor: pointer; display: flex; justify-content: space-between;">
+          <span>100 Likes</span>
+          <span style="color: #2ed573; font-weight: bold;">₹15</span>
+        </div>
+        <div onclick="selectItem('500 Likes - ₹60')" style="padding: 12px; background: #2c2f38; border-radius: 8px; cursor: pointer; display: flex; justify-content: space-between;">
+          <span>500 Likes</span>
+          <span style="color: #2ed573; font-weight: bold;">₹60</span>
+        </div>
+        <div onclick="selectItem('1,000 Likes - ₹110')" style="padding: 12px; background: #2c2f38; border-radius: 8px; cursor: pointer; display: flex; justify-content: space-between;">
+          <span>1,000 Likes</span>
+          <span style="color: #2ed573; font-weight: bold;">₹110</span>
+        </div>
+      </div>
 
-    <div class="modal-footer">
-      <button id="buyNowBtn" class="confirm-btn" disabled onclick="handleOrder()">
-        Select a Pack to Continue
+      <!-- ACTION BUTTON -->
+      <button id="orderBtn" style="width: 100%; margin-top: 15px; padding: 12px; background: #555; color: #ccc; border: none; border-radius: 8px; font-weight: bold; cursor: not-allowed;" disabled>
+        Select a pack
       </button>
+
     </div>
   </div>
+
 </div>
 
-<!-- ================= CSS STYLING ================= -->
-<style>
-  :root {
-    --primary: #ff4757;
-    --primary-hover: #e84118;
-    --card-bg: #1e1e24;
-    --modal-bg: #16161a;
-    --text-main: #f1f2f6;
-    --text-muted: #a4b0be;
-    --border-color: #2f3542;
-  }
-
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: #0f0f13;
-    color: var(--text-main);
-  }
-
-  /* --- Service Card --- */
-  .service-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    padding: 24px;
-    width: 280px;
-    text-align: center;
-    position: relative;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    transition: transform 0.25s ease, border-color 0.25s ease;
-  }
-  .service-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--primary);
-  }
-  .card-badge {
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    background: rgba(255, 71, 87, 0.15);
-    color: var(--primary);
-    padding: 4px 8px;
-    font-size: 11px;
-    font-weight: 700;
-    border-radius: 20px;
-  }
-  .card-icon {
-    font-size: 40px;
-    margin-bottom: 12px;
-  }
-  .service-card h3 {
-    margin: 0 0 6px 0;
-    font-size: 19px;
-  }
-  .service-card p {
-    color: var(--text-muted);
-    font-size: 13px;
-    margin: 0 0 20px 0;
-  }
-  .topup-btn {
-    background: linear-gradient(135deg, #ff4757, #ff6b81);
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 10px;
-    cursor: pointer;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    transition: 0.2s ease;
-  }
-  .topup-btn:hover {
-    box-shadow: 0 6px 16px rgba(255, 71, 87, 0.4);
-    transform: scale(1.02);
-  }
-
-  /* --- Modal Styles --- */
-  .modal-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(5px);
-    z-index: 9999;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
-  }
-  .modal-overlay.active {
-    display: flex;
-    animation: fadeIn 0.2s ease forwards;
-  }
-  .modal-content {
-    background: var(--modal-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 18px;
-    width: 100%;
-    max-width: 440px;
-    padding: 22px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-    animation: slideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 18px;
-  }
-  .modal-header h4 {
-    margin: 0;
-    font-size: 18px;
-  }
-  .modal-sub {
-    margin: 4px 0 0 0;
-    font-size: 12px;
-    color: var(--text-muted);
-  }
-  .close-btn {
-    background: transparent;
-    border: none;
-    color: var(--text-muted);
-    font-size: 26px;
-    line-height: 1;
-    cursor: pointer;
-  }
-  .close-btn:hover {
-    color: #fff;
-  }
-
-  /* --- Packs Grid --- */
-  .packs-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    max-height: 320px;
-    overflow-y: auto;
-    padding-right: 4px;
-  }
-  .pack-item {
-    background: #202028;
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 14px;
-    cursor: pointer;
-    text-align: left;
-    transition: 0.2s;
-  }
-  .pack-item:hover {
-    border-color: #57606f;
-    background: #272732;
-  }
-  .pack-item.selected {
-    border-color: var(--primary);
-    background: rgba(255, 71, 87, 0.12);
-  }
-  .pack-qty {
-    font-size: 15px;
-    font-weight: 700;
-    display: block;
-    margin-bottom: 4px;
-  }
-  .pack-price {
-    font-size: 13px;
-    color: #2ed573;
-    font-weight: 600;
-  }
-
-  /* --- Footer & Submit --- */
-  .modal-footer {
-    margin-top: 20px;
-  }
-  .confirm-btn {
-    width: 100%;
-    padding: 14px;
-    border-radius: 10px;
-    border: none;
-    background: var(--primary);
-    color: white;
-    font-weight: 700;
-    font-size: 14px;
-    cursor: pointer;
-    transition: 0.2s;
-  }
-  .confirm-btn:disabled {
-    background: #2f3542;
-    color: #747d8c;
-    cursor: not-allowed;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  @keyframes slideUp {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-  }
-</style>
-
-<!-- ================= JAVASCRIPT ================= -->
+<!-- SCRIPT -->
 <script>
-  // Services & Packs list data
-  const servicesData = {
-    ig_likes: {
-      title: "Instagram Likes Packs",
-      packs: [
-        { id: "lik_100", qty: "100 Likes", price: "₹15" },
-        { id: "lik_500", qty: "500 Likes", price: "₹60" },
-        { id: "lik_1000", qty: "
+  const openBtn = document.getElementById('openBtn');
+  const modalBox = document.getElementById('modalBox');
+  const closeBtn = document.getElementById('closeBtn');
+  const orderBtn = document.getElementById('orderBtn');
+
+  // Nambada Display Flex Touraga Popup Thorakpani
+  openBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    modalBox.style.display = 'flex';
+  });
+
+  // Close touba
+  closeBtn.addEventListener('click', function() {
+    modalBox.style.display = 'none';
+  });
+
+  // Outside click twbada thingba
+  modalBox.addEventListener('click', function(e) {
+    if (e.target === modalBox) {
+      modalBox.style.display = 'none';
+    }
+  });
+
+  // Pack amada nambada button switch touba
+  function selectItem(name) {
+    orderBtn.disabled = false;
+    orderBtn.style.background = '#e84118';
+    orderBtn.style.color = '#fff';
+    orderBtn.style.cursor = 'pointer';
+    orderBtn.innerText = 'Buy ' + name;
+    
+    orderBtn.onclick = function() {
+      alert(name + " order link toure!");
+      // Whatsapp/Payment API mfamsida hapchilli
+    };
+  }
+</script>
