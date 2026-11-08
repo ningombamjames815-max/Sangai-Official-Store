@@ -1,41 +1,143 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Sangai Store - Premium</title><style>*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}body{background:#0b0f14;color:#fff;padding-bottom:110px;background-image:radial-gradient(circle at 20% 0%,#1a2f1a 0%,transparent 40%),radial-gradient(circle at 90% 10%,#2a1a00 0%,transparent 40%)}.hidden{display:none!important}.top{display:flex;justify-content:space-between;align-items:center;padding:14px;background:linear-gradient(135deg,#0f5132,#16a34a,#facc15);position:sticky;top:0;z-index:50;color:#fff;box-shadow:0 4px 20px rgba(0,0,0,.4)}.top b{font-size:21px;text-shadow:0 2px 8px rgba(0,0,0,.4)}.top b span{font-size:9px;display:block;color:#fef9c3;letter-spacing:2px}.srch{display:flex;gap:6px;padding:10px;background:#0f5132}.srch input{flex:1;padding:13px;border-radius:14px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.95);color:#111}.srch button{padding:12px;border:none;border-radius:12px;background:linear-gradient(135deg,#facc15,#f59e0b);font-weight:900;box-shadow:0 4px 12px rgba(250,204,21,.4)}.pill{display:flex;gap:8px;overflow-x:auto;padding:12px}.pill span{background:#1a2230;border:1px solid #2a3444;padding:11px 15px;border-radius:20px;font-weight:700;white-space:nowrap;cursor:pointer;color:#cbd5e1}.pill span.on{background:linear-gradient(135deg,#16a34a,#facc15);color:#000;box-shadow:0 4px 14px rgba(250,204,21,.4);border:none}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 12px}.card{background:linear-gradient(160deg,#1a2230,#111827);border-radius:20px;padding:16px 10px;text-align:center;cursor:pointer;border:1px solid #2a3444;box-shadow:0 8px 20px rgba(0,0,0,.3);position:relative;overflow:hidden}.card:before{content:"PREMIUM";position:absolute;top:8px;right:-22px;background:#facc15;color:#000;font-size:7px;font-weight:900;padding:3px 24px;transform:rotate(45deg)}.card:active{transform:scale(.96)}.card h3{font-size:13px;margin:10px 0;color:#fff}.card button{background:linear-gradient(135deg,#16a34a,#22c55e);color:#fff;border:none;padding:12px 0;width:100%;border-radius:20px;font-weight:900;box-shadow:0 4px 12px rgba(34,197,94,.4);pointer-events:none}.card.boost button{background:linear-gradient(135deg,#f59e0b,#facc15);color:#000}.why{background:linear-gradient(135deg,#1a2230,#0f5132);border-radius:20px;margin:14px 12px;padding:18px;text-align:center;border:1px solid #facc15}.pg{background:linear-gradient(160deg,#1e293b,#0f172a);border-radius:18px;padding:16px 8px;text-align:center;cursor:pointer;border:1px solid #334155;min-height:135px;color:#fff}.pg.sel{border:2px solid #facc15;background:linear-gradient(160deg,#0f5132,#14532d);box-shadow:0 0 20px rgba(250,204,21,.4)}.pg .pr{background:linear-gradient(135deg,#facc15,#f59e0b);color:#000;padding:10px;border-radius:12px;font-weight:900;margin-top:8px}.inp{width:100%;padding:14px;margin:6px 0;border:1px solid #334155;border-radius:12px;background:#0f172a;color:#fff}.inp::placeholder{color:#64748b}.buy{width:100%;padding:16px;border:none;border-radius:14px;background:linear-gradient(135deg,#16a34a,#22c55e);color:#fff;font-weight:900;font-size:17px;margin-top:12px;box-shadow:0 6px 18px rgba(34,197,94,.4)}.bot{position:fixed;bottom:0;left:0;right:0;background:#0f172a;border-top:1px solid #facc15;display:flex;padding:8px;z-index:50}.bot div{flex:1;text-align:center;font-size:12px;color:#94a3b8;padding:8px;cursor:pointer;border-radius:12px}.bot div.on{color:#facc15;background:#1e293b}.box{background:#111827;border-radius:20px;padding:16px;margin:12px;border:1px solid #1f2937;color:#fff}.qr{background:#fff;border:2px solid #facc15;border-radius:18px;padding:14px;text-align:center;margin:12px;color:#111}.qr img{width:180px;height:180px}.paybtn{padding:14px;border:1px solid #334155;background:#1e293b;border-radius:14px;font-weight:800;cursor:pointer;color:#fff}.paybtn.sel{border:2px solid #facc15;background:#0f5132;box-shadow:0 0 14px rgba(250,204,21,.3)}.modal{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:200;display:none;align-items:center;justify-content:center;padding:16px}.modal.open{display:flex}.modalBox{background:#111827;width:100%;max-width:380px;border-radius:22px;padding:20px;max-height:90vh;overflow-y:auto;color:#fff;border:1px solid #facc15}.idbox{background:#0f5132;border:2px solid #22c55e;border-radius:14px;padding:12px;margin:8px 0}.srvbox{background:#1e3a8a;border:2px solid #60a5fa;border-radius:14px;padding:12px;margin:8px 0}.tabbtn{flex:1;padding:12px;border:none;border-radius:12px;font-weight:800;background:#1e293b;color:#fff}.tabbtn.on{background:linear-gradient(135deg,#16a34a,#facc15);color:#000}.hero{background:linear-gradient(135deg,#111827,#0f5132,#92400e);border-radius:22px;padding:20px;margin:0 12px;border:1px solid #facc15;box-shadow:0 10px 30px rgba(250,204,21,.2);position:relative;overflow:hidden}.hero:after{content:"🔥";position:absolute;right:10px;top:10px;font-size:40px;opacity:.3}.badge{display:inline-block;background:#facc15;color:#000;font-size:10px;font-weight:900;padding:4px 10px;border-radius:20px;margin-bottom:8px}.fire{animation:fire 1.2s infinite alternate}@keyframes fire{from{transform:scale(1)}to{transform:scale(1.08)}}</style></head><body>
-<div class="top"><div><b>🦌 Sangai Store<span>✦ PREMIUM • OFFICIAL • MANIPUR ✦</span></b></div><div id="topUser"><button onclick="openLogin()" style="background:#facc15;border:none;padding:9px 14px;border-radius:20px;font-weight:900">👤 Login</button></div></div>
-<div class="srch"><button onclick="openMenu()">☰</button><input id="sb" placeholder="🔍 Search game - MLBB, FF..." oninput="searchGame(this.value)"><button onclick="clearSearch()">✕</button><button onclick="showPage('orders')">Me</button></div>
-<div id="page-home">
-<div id="loginBanner" class="box" style="background:linear-gradient(135deg,#fef9c3,#facc15);color:#111;border:1px solid #facc15;text-align:center"><b>👋 Khurumjari! Premium Member!</b><p style="font-size:13px;margin:6px 0;color:#333">Masagi Email na Login toubiyu - Nanggi Order khak leigani!</p><button onclick="openLogin()" style="background:#111;color:#facc15;border:none;padding:11px 20px;border-radius:12px;font-weight:900">📧 Masagi Email na Login →</button></div>
-<div id="myProfileBanner" class="box" style="display:none;background:linear-gradient(135deg,#0f5132,#14532d);border:2px solid #facc15"><div style="display:flex;justify-content:space-between;align-items:center"><div><b id="profName">👋 User</b><br><span id="profEmail" style="font-size:13px;color:#fde68a"></span><br><span id="profPhone" style="font-size:13px;color:#fde68a"></span></div><button onclick="doLogout()" style="background:#fff;border:none;padding:9px 12px;border-radius:10px;font-weight:900">Logout</button></div><p style="font-size:12px;color:#facc15;margin-top:6px">👑 PREMIUM MEMBER - Masagi Email da Login leire!</p></div>
-<div class="pill"><span class="on" onclick="filterCat(this,'ALL')">✦ All</span><span onclick="filterCat(this,'MLBB')">MLBB</span><span onclick="filterCat(this,'PUBG')">PUBG</span><span onclick="filterCat(this,'HOK')">HOK</span><span onclick="filterCat(this,'BGMI')">BGMI</span><span onclick="filterCat(this,'FF')">Free Fire</span><span onclick="filterCat(this,'BOOST')">Boost</span><span onclick="filterCat(this,'FB')">FB</span><span onclick="filterCat(this,'IG')">IG</span><span onclick="filterCat(this,'YT')">YT</span></div>
-<div class="hero" onclick="openService('MLBB')"><span class="badge">🔥 HOT DEAL • PREMIUM PRICE</span><b style="color:#facc15">🦌 SANGAI STORE - PREMIUM</b><h2 style="margin:8px 0;font-size:22px;line-height:1.3">MLBB • PUBG • HOK • BGMI • FF<br><span style="color:#facc15">CHEAPER THAN IN-GAME!</span></h2><p>⚡ INSTANT • 🛡️ 100% SAFE • 👑 PREMIUM SUPPORT</p><button class="fire" style="background:#facc15;border:none;padding:12px 16px;border-radius:10px;font-weight:900;margin-top:10px">🔥 TOP UP NOW →</button></div>
-<div style="background:#111827;border:1px solid #facc15;border-radius:14px;padding:12px;margin:12px;text-align:center">📦 Total: <b id="o1" style="color:#facc15">1,250+</b> • Today: <b style="color:#f87171">42 🔥</b> • ✅ Delivered • 👑 Premium</div>
-<h3 style="margin:14px 12px;color:#facc15">🎮 GAME RECHARGE - PREMIUM</h3>
-<div class="grid" id="homeGrid">
-<div class="card" data-cat="MLBB" onclick="openService('MLBB')"><div style="font-size:48px">🎮</div><h3>Mobile Legends<br>Diamonds</h3><button>Top Up →</button></div>
-<div class="card" data-cat="PUBG" onclick="openService('PUBG')"><div style="font-size:48px">🔫</div><h3>PUBG Mobile<br>UC Recharge</h3><button>Top Up →</button></div>
-<div class="card" data-cat="HOK" onclick="openService('HOK')"><div style="font-size:48px">👑</div><h3>Honor Of Kings<br>Tokens</h3><button>Top Up →</button></div>
-<div class="card" data-cat="BGMI" onclick="openService('BGMI')"><div style="font-size:48px">🎯</div><h3>BGMI<br>UC Recharge</h3><button>Top Up →</button></div>
-<div class="card" data-cat="FF" onclick="openService('FF')"><div style="font-size:48px">🔥</div><h3>Free Fire<br>Diamonds</h3><button>Top Up →</button></div>
-<div class="card boost" data-cat="BOOST" onclick="openService('BOOST')"><div style="font-size:48px">🚀</div><h3>MLBB<br>Rank Boost</h3><button>Top Up →</button></div>
-<div class="card boost" data-cat="BOOST" onclick="openService('BOOST')"><div style="font-size:48px">⭐</div><h3>Mythic Boost<br>Points</h3><button>Top Up →</button></div>
-<div class="card" data-cat="FB" onclick="openService('FB')"><div style="font-size:48px">📘</div><h3>Facebook<br>Followers / Likes</h3><button>Order →</button></div>
-<div class="card" data-cat="IG" onclick="openService('IG')"><div style="font-size:48px">📸</div><h3>Instagram<br>Followers / Likes</h3><button>Order →</button></div>
-<div class="card" data-cat="YT" onclick="openService('YT')"><div style="font-size:48px">▶️</div><h3>YouTube<br>Subs / Views</h3><button>Order →</button></div>
-</div>
-<h3 style="margin:14px 12px;color:#facc15">📱 SOCIAL MEDIA BOOST - PREMIUM</h3>
-<div class="why"><h2>👑 WHY CHOOSE SANGAI PREMIUM?</h2><p style="margin-top:8px">🛡️ Trusted • ⚡ Super Fast • 💳 UPI / GPay • 🔥 24/7 Support<br>💬 WhatsApp: 6909729845</p></div>
-<div style="background:linear-gradient(135deg,#0f5132,#111827);color:#fff;padding:20px 14px;border-top:1px solid #facc15"><b style="font-size:22px;color:#facc15">🦌 Sangai Store - Premium</b><p style="margin-top:10px">MLBB • PUBG • HOK • BGMI • FF • Boost • FB • IG • YT<br>Best Price in Manipur - Premium Quality!</p><button onclick="window.open('https://wa.me/916909729845','_blank')" style="width:100%;background:#facc15;border:none;padding:13px;border-radius:12px;font-weight:900;margin-top:12px">💬 WhatsApp: 6909729845</button><p style="text-align:center;font-size:12px;margin-top:10px;color:#fde68a">UPI: haobijamtenis@okicici • ©2026 Premium</p></div>
-</div>
-<div id="page-region" class="hidden"><div class="box"><h2>🌍 Region - MLBB Checker</h2><input class="inp" id="cu" placeholder="User ID"><input class="inp" id="cs" placeholder="Server ID"><button class="buy" onclick="checkMLBB()">🔍 Check Account</button><p id="cr" style="text-align:center;color:#facc15;margin-top:10px"></p></div><div class="box"><h3>🌍 Select Region</h3><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px"><div class="box" style="margin:0;text-align:center;cursor:pointer" onclick="selectRegion('India')">🇮🇳<br><b>India</b></div><div class="box" style="margin:0;text-align:center;cursor:pointer" onclick="selectRegion('Manipur')">🦌<br><b>Manipur</b></div><div class="box" style="margin:0;text-align:center;cursor:pointer" onclick="selectRegion('Global')">🌍<br><b>Global</b></div><div class="box" style="margin:0;text-align:center;cursor:pointer" onclick="selectRegion('Philippines')">🇵🇭<br><b>Philippines</b></div></div></div></div>
-<div id="page-orders" class="hidden"><div class="box" style="text-align:center"><div style="font-size:40px">📦</div><h2>My Orders - Premium</h2><p id="orderUser" style="font-size:13px;color:#fde68a">Login toudriba - Order history leigani</p><p>Total: <b id="o2">1,250+</b></p><div id="orderList" style="text-align:left;margin-top:10px"></div><button class="buy" onclick="window.open('https://wa.me/916909729845','_blank')">💬 WhatsApp</button><button class="buy" style="background:#facc15;color:#000" onclick="showPage('home')">🛒 Order Amuk Leiyu</button></div></div>
-<div id="page-sub" class="hidden"><div class="box" style="text-align:center"><div style="font-size:40px">🏆</div><h2>👑 Premium Leaderboard</h2><p>Top: James Ningombam - 50K+ 🏆</p><button class="buy" onclick="openService('MLBB')">🎫 Pass Leiyu</button></div></div>
-<div id="detail" class="hidden">
-<div style="margin:12px;background:#1e293b;padding:9px 12px;border-radius:10px;display:inline-block;border:1px solid #facc15" onclick="goHome()">← Back</div>
-<div style="margin:12px;background:linear-gradient(135deg,#111827,#0f5132);color:#fff;border-radius:20px;padding:18px;border:1px solid #facc15"><span class="badge">👑 PREMIUM</span><h1 id="ht">Honor Of Kings</h1><p>Top up now - Cheapest in Manipur! Premium Quality!</p></div>
-<div class="box" id="idBox"><h3 style="color:#facc15">1. ENTER ID + SERVER 👇</h3>
-<div class="idbox"><label style="font-weight:800;font-size:14px" id="gidLabel">🎮 1. USER ID:</label><input class="inp" id="gid" placeholder="USER ID happiyu - Ex: 123456789" oninput="autoName()" onkeyup="autoName()" onchange="autoName()" onblur="autoName()"><p style="font-size:11px;color:#a7f3d0">👆 Masagi Game ID happiyu - Happagadi Ming auto thokkani!</p></div>
-<div class="srvbox" id="srvWrap"><label style="font-weight:800;font-size:14px" id="sidLabel">🌍 2. SERVER / ZONE ID:</label><input class="inp" id="sid" placeholder="Server ID happiyu - Ex: 1234" inputmode="numeric" oninput="autoName()" onkeyup="autoName()" onchange="autoName()"><select class="inp" id="hokServer" style="display:none" onchange="autoName()"><option value="">Select Server - Khannbiyu 👇</option><option value="HOK Asia">🌏 HOK - Asia</option><option value="HOK India">🇮🇳 HOK - India</option><option value="HOK Global">🌍 HOK - Global</option><option value="HOK SEA">🌊 HOK - SEA</option></select><select class="inp" id="bgmiServer" style="display:none" onchange="autoName()"><option value="">Select Server - Khannbiyu 👇</option><option value="BGMI India">🇮🇳 BGMI - India</option><option value="BGMI Asia">🌏 BGMI - Asia</option><option value="BGMI Global">🌍 BGMI - Global</option><option value="BGMI KRJP">🇰🇷 BGMI - KRJP</option></select><select class="inp" id="ffServer" style="display:none" onchange="autoName()"><option value="">Select Server - Khannbiyu 👇</option><option value="FF India">🇮🇳 Free Fire - India</option><option value="FF Asia">🌏 Free Fire - Asia</option><option value="FF Global">🌍 Free Fire - Global</option><option value="FF BD">🇧🇩 Free Fire - BD</option></select><p style="font-size:11px;color:#bfdbfe">👆 Masagi Server khannbiyu / happiyu</p></div>
-<button onclick="checkNameForce()" id="checkBtn" style="width:100%;padding:14px;border:none;border-radius:12px;background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;font-weight:900">🔍 Check Name - Ming Chingthokkadabani!</button><div id="ck" style="display:none;background:#0f5132;border:1px solid #facc15;border-radius:12px;padding:12px;margin-top:8px;text-align:center"><b id="ckName" style="color:#facc15">✅ Player Found!</b><br><span id="ckSub" style="font-size:12px;color:#d1fae5"></span></div><input type="hidden" id="ign" value=""><p style="font-size:11px;color:#94a3b8;text-align:center;margin-top:6px">ID happiyu → <b style="color:#facc15">Check Name</b> nambiyu → <b>Masagi Ming thokkani!</b></p></div>
-<div class="box" id="socialBox" style="display:none"><h3 style="color:#facc15">1. SOCIAL LINK 👇</h3><label style="font-weight:800;font-size:13px" id="socialLabel">🔗 Channel / Profile Link:</label><input class="inp" id="chanLink" placeholder="Link happiyu - Ex: https://youtube.com/@sangai" oninput="autoSocial()" onkeyup="autoSocial()" onchange="autoSocial()" onblur="autoSocial()"><label style="font-weight:800;font-size:13px">👤 Username / Channel Name:</label><input class="inp" id="socialName" placeholder="Ex: @sangai_store" oninput="autoSocial()" onkeyup="autoSocial()" onchange="autoSocial()" onblur="autoSocial()"><button onclick="checkSocialForce()" style="width:100%;padding:14px;border:none;border-radius:12px;background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;font-weight:900;margin-top:6px">🔍 Check Channel / Link</button><div id="ck2" style="display:none;background:#0f5132;border:1px solid #facc15;border-radius:12px;padding:12px;margin-top:8px;text-align:center"><b id="ckName2" style="color:#facc15">✅ Link Phangje!</b><br><span id="ckSub2" style="font-size:12px;color:#d1fae5"></span></div></div>
-<h3 style="margin:14px 12px;color:#facc15">2. SELECT PACKAGE - PACK KHANNIYU 👇</h3>
-<div id="pkgBox" class="grid"></div>
-<div class="box"><b style="color:#facc15">Quantity</b><div style="display:flex;gap:10px;align-items:center;margin-top:8px"><button onclick="changeQty(-1)" style="width:42px;height:42px;border-radius:50%;border:1px solid #475569;background:#1e293b;color:#fff;font-size:22px">−</button><b id="qn" style="font-size:22px">1</b><button onclick="changeQty(1)" style="width:42px;height:42px;border-radius:50%;border:none;background:#facc15;color:#000;font-size:22px;font-weight:900">+</button><span style="margin-left:auto">Total: <b id="qt" style="color:#facc15">Rs. 21</b></span></div></div>
-<div class="box"><h3 style="color:#facc15">3. PAYMENT - PAISA THABIYU 💳</h3><p style="font-size:13px;color:#94a3b8">1. Payment Method khannbiyu → 2. Paisa thabiyu → 3. UTR + Screenshot happiyu → 4. Payment Toubare nambiyu</p><p style="font-size:13px;margin-top:8px"><b>Payment Method Khannbiyu 👇</b></p><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:10px 0"><button class="paybtn" id="btn-gpay" onclick="selPay('GPay',this)">🟢<br>GPay</button><button class="paybtn" id="btn-phonepe" onclick="selPay('PhonePe',this)">🟣<br>PhonePe</button><button class="paybtn" id="btn-paytm" onclick="selPay('Paytm',this)">🔵<br>Paytm</button></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><button class="paybtn" id="btn-qr" onclick="selPay('QR Scan',this)">📷<br>QR Scan</button
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sangai Official Store - Instant Game Top-Up</title>
+  <!-- Tailwind CSS & FontAwesome Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="bg-[#0b0f19] text-gray-100 min-h-screen flex flex-col font-sans">
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="sticky top-0 z-50 bg-[#111827]/90 backdrop-blur-md border-b border-gray-800">
+    <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-yellow-500 to-amber-300 flex items-center justify-center font-black text-black text-xl shadow-lg shadow-yellow-500/20">
+          S
+        </div>
+        <div>
+          <a href="#" class="font-extrabold text-lg tracking-wide text-white">SANGAI <span class="text-yellow-400">STORE</span></a>
+          <p class="text-[10px] text-gray-400">Direct WhatsApp Top-Up</p>
+        </div>
+      </div>
+
+      <div class="flex items-center space-x-4">
+        <a href="#" class="text-sm font-semibold text-gray-300 hover:text-yellow-400 flex items-center gap-1.5">
+          <i class="fa-solid fa-house text-xs"></i> Home
+        </a>
+        <button onclick="toggleModal('loginModal')" class="bg-yellow-500 hover:bg-yellow-400 text-black text-xs font-bold px-4 py-2 rounded-lg flex items-center gap-1.5 transition">
+          <i class="fa-solid fa-user text-xs"></i> Login
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= MAIN CONTAINER ================= -->
+  <main class="max-w-4xl mx-auto w-full px-4 py-6 flex-1">
+    
+    <!-- Step 1: Select Game -->
+    <section class="mb-6">
+      <h3 class="text-xs uppercase tracking-wider text-yellow-400 font-bold mb-3 flex items-center gap-2">
+        <span class="w-5 h-5 rounded-full bg-yellow-400 text-black flex items-center justify-center text-xs">1</span>
+        Select Game
+      </h3>
+      <div class="grid grid-cols-2 gap-3">
+        <button type="button" onclick="selectGame('MLBB')" id="game-btn-mlbb" class="p-3.5 rounded-xl border-2 border-yellow-400 bg-gray-900 text-center font-bold text-sm flex items-center justify-center gap-2 transition">
+          <i class="fa-solid fa-gamepad text-yellow-400"></i> Mobile Legends
+        </button>
+        <button type="button" onclick="selectGame('BGMI')" id="game-btn-bgmi" class="p-3.5 rounded-xl border-2 border-gray-800 bg-gray-900 text-center font-bold text-sm flex items-center justify-center gap-2 transition">
+          <i class="fa-solid fa-crosshairs text-gray-400"></i> BGMI / PUBG
+        </button>
+      </div>
+    </section>
+
+    <!-- Step 2: Player Details & ID Verification -->
+    <section class="mb-6 bg-gray-900 p-5 rounded-2xl border border-gray-800">
+      <h3 class="text-xs uppercase tracking-wider text-yellow-400 font-bold mb-3 flex items-center gap-2">
+        <span class="w-5 h-5 rounded-full bg-yellow-400 text-black flex items-center justify-center text-xs">2</span>
+        Enter Player ID & Check Username
+      </h3>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div>
+          <label class="block text-xs font-semibold text-gray-400 mb-1">User ID / Character ID</label>
+          <input type="text" id="userId" placeholder="Enter User ID (press Enter)" class="w-full bg-gray-950 border border-gray-700 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-yellow-400 text-white" />
+        </div>
+        <div id="zoneIdContainer">
+          <label class="block text-xs font-semibold text-gray-400 mb-1">Zone ID (Server)</label>
+          <input type="text" id="zoneId" placeholder="Enter Zone ID (press Enter)" class="w-full bg-gray-950 border border-gray-700 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-yellow-400 text-white" />
+        </div>
+      </div>
+
+      <div class="mt-3 flex items-center justify-between flex-wrap gap-2">
+        <button type="button" onclick="checkUsername()" class="bg-gray-800 hover:bg-gray-700 border border-gray-700 text-yellow-400 text-xs font-semibold px-4 py-2 rounded-lg flex items-center gap-1.5 transition">
+          <i class="fa-solid fa-magnifying-glass"></i> Check / Verify Name
+        </button>
+        <div id="usernameStatus" class="text-xs text-gray-400">
+          Username: <span id="playerName" class="font-bold text-white">Not Verified</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Step 3: Recharge Packs -->
+    <section class="mb-6">
+      <h3 class="text-xs uppercase tracking-wider text-yellow-400 font-bold mb-3 flex items-center gap-2">
+        <span class="w-5 h-5 rounded-full bg-yellow-400 text-black flex items-center justify-center text-xs">3</span>
+        Select Recharge Pack
+      </h3>
+      <div id="packsGrid" class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        <!-- Packs dynamically populated -->
+      </div>
+    </section>
+
+    <!-- Step 4: Payment Method Selection -->
+    <section class="mb-6 bg-gray-900 p-5 rounded-2xl border border-gray-800">
+      <h3 class="text-xs uppercase tracking-wider text-yellow-400 font-bold mb-3 flex items-center gap-2">
+        <span class="w-5 h-5 rounded-full bg-yellow-400 text-black flex items-center justify-center text-xs">4</span>
+        Select Payment Method
+      </h3>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div onclick="selectPayment('Google Pay')" id="pay-gpay" class="payment-card border border-yellow-400 bg-yellow-400/10 p-3 rounded-xl text-center cursor-pointer font-semibold text-xs flex flex-col items-center gap-1.5">
+          <i class="fa-brands fa-google-pay text-2xl text-blue-400"></i>
+          <span>Google Pay</span>
+        </div>
+        <div onclick="selectPayment('PhonePe')" id="pay-phonepe" class="payment-card border border-gray-800 bg-gray-950 p-3 rounded-xl text-center cursor-pointer font-semibold text-xs flex flex-col items-center gap-1.5">
+          <i class="fa-solid fa-mobile-screen-button text-xl text-purple-400"></i>
+          <span>PhonePe</span>
+        </div>
+        <div onclick="selectPayment('Paytm UPI')" id="pay-paytm" class="payment-card border border-gray-800 bg-gray-950 p-3 rounded-xl text-center cursor-pointer font-semibold text-xs flex flex-col items-center gap-1.5">
+          <i class="fa-solid fa-wallet text-xl text-cyan-400"></i>
+          <span>Paytm UPI</span>
+        </div>
+        <div onclick="selectPayment('UPI QR Code')" id="pay-qr" class="payment-card border border-gray-800 bg-gray-950 p-3 rounded-xl text-center cursor-pointer font-semibold text-xs flex flex-col items-center gap-1.5">
+          <i class="fa-solid fa-qrcode text-xl text-green-400"></i>
+          <span>UPI QR Code</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Order Summary & Checkout -->
+    <section class="bg-gray-900 border border-gray-800 rounded-2xl p-5">
+      <div class="grid grid-cols-2 gap-4 pb-4 border-b border-gray-800 text-sm">
+        <div>
+          <span class="text-xs text-gray-400 block">Selected Pack:</span>
+          <span id="summaryPack" class="font-bold text-yellow-400">None selected</span>
+        </div>
+        <div class="text-right">
+          <span class="text-xs text-gray-400 block">Total Amount:</span>
+          <span id="summaryPrice" class="font-black text-xl text-white">₹0</span>
+        </div>
+      </div>
+
+      <button onclick="sendOrderToWhatsApp()" class="mt-4 w-full bg-green-500 hover:bg-green-600 text-black font-extrabold py-3.5 rounded-xl shadow-lg shadow-green-500/20 text-sm flex items-center justify-center gap-2 transition">
+        <i class="fa-brands fa-whatsapp text-lg"></i>
+        Proceed to Order on WhatsApp
+      </button>
+    </section>
+
+  </main>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="fixed inset-0 bg-black/75 backdrop-blur-sm hidden items-center justify-
