@@ -4,54 +4,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>🦌 Sangai Official Store</title>
+<title>🦌 Sangai Official Store - MLBB • PUBG • HOK • IG • YT • FB • Boost</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap');
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',Arial,sans-serif}
-html,body{overflow-x:hidden;width:100%;max-width:100vw;background:#050014;color:#fff}
-body{padding-bottom:100px}
-body::before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 20% 0%,#ff0000 0%,transparent 35%),radial-gradient(circle at 90% 20%,#0ea5e9 0%,transparent 35%),radial-gradient(circle at 50% 100%,#db2777 0%,transparent 35%);opacity:.30;z-index:-1}
-/* TOPBAR - LOGO */
-.topbar{display:flex;justify-content:space-between;align-items:center;padding:8px 10px;background:rgba(10,10,30,.95);backdrop-filter:blur(20px);position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,0,0,.3);width:100%;overflow:hidden}
-.logo{display:flex;align-items:center;gap:6px;flex-shrink:1;min-width:0}
-.logo-img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid #ff0000;box-shadow:0 0 15px rgba(255,0,0,.6);flex-shrink:0}
-.logo b{font-size:18px;background:linear-gradient(90deg,#fff,#ff0000);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1;white-space:nowrap}
-.logo b span{font-size:7px;letter-spacing:2px;color:#cbd5ff;-webkit-text-fill-color:#cbd5ff;display:block}
-.wallet-top{background:linear-gradient(90deg,#ff0000,#8b5cf6);padding:5px 5px 5px 8px;border-radius:30px;display:flex;align-items:center;gap:5px;font-weight:700;font-size:13px;white-space:nowrap;flex-shrink:0;box-shadow:0 5px 15px rgba(255,0,0,.4)}
-.wallet-top .rs{background:rgba(255,255,255,.25);width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center}
-.wallet-top .plus{background:#fff;color:#000;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px}
-.avatar{width:36px;height:36px;background:linear-gradient(135deg,#ff0000,#000);border:2px solid #ff0000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:800;flex-shrink:0}
-/* BANNER */
-.banner{margin:10px;border-radius:22px;overflow:hidden;position:relative;background:linear-gradient(135deg,rgba(255,0,0,.85),rgba(139,92,246,.9),rgba(236,72,153,.9)),url('https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&fit=crop');background-size:cover;background-position:center;padding:16px;min-height:210px}
-.banner::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(0,0,0,.4))}
-.banner>*{position:relative;z-index:2}
-.banner .logo-big{width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 0 25px rgba(255,0,0,.8);margin-bottom:10px}
-.badges{display:flex;flex-wrap:wrap;gap:6px}
-.badge{background:rgba(255,255,255,.22);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.35);padding:7px 10px;border-radius:20px;font-size:11px;font-weight:600}
-.banner h1{font-size:24px;margin-top:8px;line-height:1.2;text-shadow:0 2px 20px rgba(0,0,0,.5)}
-.banner p{margin-top:8px;font-size:13px;line-height:1.5;color:#e0e7ff}
-.banner .read{color:#fff;background:rgba(255,255,255,.2);display:inline-block;padding:8px 14px;border-radius:20px;margin-top:12px;font-size:12px;font-weight:700}
-.sec-title{display:flex;align-items:center;gap:10px;margin:20px 12px 10px}
-.sec-title .dot{width:8px;height:32px;background:linear-gradient(180deg,#ff0000,#ec4899);border-radius:10px;flex-shrink:0}
-.sec-title h2{font-size:18px;font-weight:800}
-.sec-title span{margin-left:auto;background:rgba(255,255,255,.1);padding:6px 10px;border-radius:20px;font-size:11px;color:#cbd5ff;white-space:nowrap}
+html,body{overflow-x:hidden;background:#f6f8f3;color:#222}
+body{padding-bottom:95px}
+.hidden{display:none}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 14px 6px;background:#149a45;position:sticky;top:0;z-index:50}
+.logo{display:flex;align-items:center;gap:7px}
+.logo-img{width:42px;height:42px;border-radius:50%;object-fit:cover;border:2px solid #fff;background:#fff}
+.logo b{font-size:21px;color:#fff;line-height:1}.logo b span{font-size:8px;color:#d1fae5;display:block;letter-spacing:1px}
+.top-right{display:flex;gap:8px}.inr{background:#1e293b;color:#fff;padding:10px 18px;border-radius:10px;font-weight:800}.wallet-mini{background:#facc15;color:#000;padding:10px 12px;border-radius:10px;font-weight:800}
+.search-bar{display:flex;gap:10px;align-items:center;padding:10px 14px 14px;background:#149a45}
+.menu-btn{color:#fff;font-size:30px;cursor:pointer}
+.search-input{flex:1;background:rgba(255,255,255,.28);border-radius:12px;padding:13px 12px;color:#fff;display:flex;gap:8px}
+.search-input input{background:transparent;border:none;outline:none;color:#fff;width:100%;font-size:16px;font-weight:600}
+.search-input input::placeholder{color:rgba(255,255,255,.9)}
+.me-btn{background:#facc15;border:none;padding:13px 20px;border-radius:12px;font-weight:700;font-size:16px;cursor:pointer}
+.cat-scroll{display:flex;gap:8px;overflow-x:auto;padding:12px 12px 4px;scrollbar-width:none}
+.cat-scroll::-webkit-scrollbar{display:none}
+.cat-pill{background:#fff;border:1px solid #e5e7eb;padding:10px 16px;border-radius:20px;font-weight:700;font-size:13px;white-space:nowrap;cursor:pointer;flex-shrink:0}
+.cat-pill.active{background:#16a34a;color:#fff;border-color:#16a34a}
+.banner-wrap{padding:10px 12px 0}.banner{border-radius:18px;overflow:hidden;position:relative;background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.08);cursor:pointer}.banner img{width:100%;display:block;aspect-ratio:2.1/1;object-fit:cover}
+.banner-content{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.55),transparent 65%);padding:14px;color:#fff;display:flex;flex-direction:column;justify-content:center}.banner-badge{background:#ff0000;color:#fff;font-size:10px;font-weight:800;padding:4px 8px;border-radius:6px;display:inline-block}
+.marquee{background:#e8f5e9;overflow:hidden;white-space:nowrap;padding:12px 0;margin-top:10px}.marquee span{display:inline-block;animation:scroll 18s linear infinite;font-size:15px;font-weight:600;color:#333}@keyframes scroll{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
+.sec-head{display:flex;justify-content:space-between;align-items:center;margin:16px 12px 10px}.sec-head-left{display:flex;gap:10px;align-items:center}.sec-head-left .ic{width:44px;height:44px;background:#dcfce7;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px}.sec-head-left b{font-size:18px}
+.timer{display:flex;gap:5px}.timer span{background:#16a34a;color:#fff;padding:6px 8px;border-radius:8px;font-weight:800;font-size:14px}.timer span small{font-size:10px}
+.flash-card{background:#fff;border:2px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(135deg,#a855f7,#22c55e,#f59e0b) border-box;border-radius:16px;padding:12px;display:flex;gap:12px;margin:0 12px;cursor:pointer;position:relative}.flash-card .discount{position:absolute;top:12px;left:12px;background:#16a34a;color:#fff;font-size:13px;font-weight:800;padding:5px 10px;border-radius:8px}.flash-card .fimg{width:78px;height:78px;border-radius:12px;overflow:hidden;flex-shrink:0}.flash-card .fimg img{width:100%;height:100%;object-fit:cover}
+.hot-title{display:flex;gap:8px;align-items:center;margin:20px 12px 10px}.hot-title .bar{width:6px;height:26px;background:#16a34a;border-radius:10px}.hot-title b{font-size:17px;letter-spacing:1px;color:#166534}
 .home-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 12px}
-.game-card{background:rgba(255,255,255,.08);backdrop-filter:blur(15px);border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:14px 8px;text-align:center;position:relative;cursor:pointer;overflow:hidden}
-.game-card .topbadge{position:absolute;top:8px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,#22c55e,#16a34a);color:#fff;font-size:10px;font-weight:800;padding:4px 8px;border-radius:20px;white-space:nowrap;z-index:2}
-.game-card .topbadge.orange{background:linear-gradient(90deg,#f97316,#ea580c)}.game-card .topbadge.pink{background:linear-gradient(90deg,#ec4899,#db2777)}.game-card .topbadge.red{background:linear-gradient(90deg,#ff0000,#dc2626)}.game-card .topbadge.purple{background:linear-gradient(90deg,#8b5cf6,#7c3aed)}.game-card .topbadge.gold{background:linear-gradient(90deg,#f59e0b,#d97706);color:#000}.game-card .topbadge.blue{background:linear-gradient(90deg,#2563eb,#1d4ed8)}
-.game-card .circle{width:72px;height:72px;border-radius:50%;border:3px solid #ff0000;margin:20px auto 8px;overflow:hidden;background:#fff;box-shadow:0 0 15px rgba(255,0,0,.4)}
-.game-card .circle img{width:100%;height:100%;object-fit:cover;display:block}
-.game-card h3{font-size:13px;line-height:1.3;min-height:34px;font-weight:700}
-.game-card .topup{margin-top:8px;background:linear-gradient(90deg,#ff0000,#8b5cf6);color:#fff;border:none;padding:10px 0;width:100%;border-radius:18px;font-weight:800;cursor:pointer;font-size:13px}
-.game-card.boost-highlight{border:1px solid #f59e0b;background:linear-gradient(180deg,rgba(245,158,11,.25),rgba(255,255,255,.08))}
-.game-card.boost-highlight .topup{background:linear-gradient(90deg,#f59e0b,#f97316);color:#000}
-.detail-card{background:rgba(255,255,255,.08);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.15);border-radius:22px;padding:16px;margin:12px}
-.step{display:flex;gap:10px;align-items:center;margin-bottom:12px}
-.step .num{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#ff0000,#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;flex-shrink:0}
-.step h3{background:linear-gradient(90deg,#ff6b6b,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-size:17px;text-transform:uppercase}
-.step p{color:#a5b4fc;font-size:11px}
-.detail-input{width:100%;padding:14px 14px;margin:7px 0;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.2);border-radius:14px;color:#fff;font-size:14px;outline:none}
-.detail-input:focus{border-color:#ff0000}
-.detail-input::placeholder{color:#94a3b8}
-.check-btn{width:100%;padding:15px;border:none;border-radius:14px;background:linear-gradient(90deg,#ff0000,#8b5cf6,#ec4899);color:#fff;font-size:16px;font-weight:800;cursor:pointer}
-.cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:
+.game-card{background:#fff;border-radius:18px;padding:14px 8px;text-align:center;position:relative;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.06);border:1px solid #eef2e7}
+.game-card .topbadge{position:absolute;top:8px;left:50%;transform:translateX(-50%);background:#22c55e;color:#fff;font-size:10px;font-weight:800;padding:4px 8px;border-radius:20px;white-space:nowrap}.game-card .topbadge.orange{background:#f97316}.game-card .topbadge.pink{background:#ec4899}.game-card .topbadge.red{background:#ff0000}.game-card .topbadge.purple{background:#8b5cf6}.game-card .topbadge.gold{background:#f59e0b;color:#000}.game-card .topbadge.blue{background:#2563eb}
+.game-card .circle{width:70px;height:70px;border-radius:50%;border:2px solid #e5e7eb;margin:20px auto 8px;overflow:hidden;background:#fff}.game-card .circle img{width:100%;height:100%;object-fit:cover}
+.game-card h3{font-size:13px;color:#111;line-height:1.3}.game-card .topup{margin-top:8px;background:#16a34a;color:#fff;border:none;padding:10px 0;width:100%;border-radius:20px;font-weight:800;cursor:pointer}
+.game-card.boost-highlight{background:#fffbeb;border:1px solid #f59e0b}.game-card.boost-highlight .topup{background:#f59e0b;color:#000}
+.why-wrap{background:#fff;border-radius:22px;margin:16px 12px;padding:20px 14px 16px;box-shadow:0 4px 16px rgba(0,0,0,.06);border:1px solid #eef2e7}
+.why-title{text-align:center;font-size:18px;letter-spacing:3px;color:#4d7c0f;font-weight:800;margin-bottom:16px}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.why-card{background:#fff;border:1px solid #e5e7eb;border-radius:18px;padding:18px 10px;text-align:center;cursor:pointer}
+.why-icon{width:58px;height:58px;background:#e8f5e9;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 12px}
+.why-card b{font-size:16px;color:#111;line-height:1.3;display:block}.why-card p{font-size:13px;color:#777;line-height:1.5;margin-top:8px}
+.news-card{background:#fff;border-radius:0 0 22px 22px;padding:22px 16px 24px;text-align:center}
+.news-card h2{font-size:25px;color:#2e7d32;font-weight:800}
+.social-row{display:flex;gap:16px;justify-content:center;margin-top:18px}.social-row a{width:62px;height:62px;background:#eef6e9;border:1px solid #d9ecd2;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none}.social-row a img{width:32px;height:32px;object-fit:contain}
+.footer-green{background:#149a45;padding:28px 16px 40px;color:#fff;margin-top:18px}
+.footer-green .f-logo{display:flex;align-items:center;gap:8px}.footer-green .f-logo img{width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid #fff;background:#fff}.footer-green .f-logo b{font-size:30px;line-height:1}.footer-green .f-logo span{font-size:10px;letter-spacing:1px;display:block;color:#d1fae5}
+.footer-green p.desc{font-size:15px;line-height:1.7;color:#e8f5e9;margin-top:20px}
+.pay-scroll{display:flex;gap:8px;overflow-x:auto}.pay-item{background:#fff;color:#222;border-radius:10px;padding:10px 14px;white-space:nowrap;font-weight:700;font-size:13px;flex-shrink:0}
+.me-overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:90;display:none}.me-overlay.show{display:block}
+.me-drawer{position:fixed;top:0;left:0;right:0;background:#f6f8f3;z-index:100;border-radius:0 0 24px 24px;padding:14px 14px 20px;transform:translateY(-110%);transition:.35s;max-height:92vh;overflow-y:auto}
+.me-drawer.show{transform:translateY(0)}
+.me-head{display:flex;justify-content:space-between;align-items:center}.me-logo{display:flex;gap:10px;align-items:center}.me-logo .bolt{width:52px;height:52px;background:#22c55e;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;color:#fff}.me-logo b{font-size:24px;color:#14532d}.me-logo span{font-size:11px;letter-spacing:2px;color:#4d7c0f;font-weight:700}
+.me-close{width:44px;height:44px;background:#fff;border:1px solid #e5e7eb;border-radius:12px;font-size:20px;cursor:pointer}
+.me-profile{background:#fff;border-radius:16px;padding:12px;display:flex;gap:12px;align-items:center;margin-top:12px;border:1px solid #eef2e7}.me-profile .av{width:56px;height:56px;border-radius:50%;border:3px solid #22c55e;overflow:hidden;background:#fff}.me-profile .av img{width:100%;height:100%;object-fit:cover}
+.me-profile b{font-size:19px;color:#111}.me-profile .member{background:#dcfce7;color:#16a34a;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:800;display:inline-block;margin-top:6px}
+.me-wallet{background:#fff;border-radius:16px;padding:14px;margin-top:12px;display:flex;gap:10px;align-items:center;border:1px solid #eef2e7}.me-wallet .wic{width:44px;height:44px;background:#facc15;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px}
+.me-menu{background:#fff;border-radius:18px;padding:8px;margin-top:14px;border:1px solid #eef2e7}.me-item{display:flex;gap:14px;padding:14px 10px;border-bottom:1px solid #f3f4f6;cursor:pointer;align-items:center}.me-item:last-child{border:none}.me-item .ic{width:48px;height:48px;background:#e8f5e9;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px}.me-item b{flex:1;font-size:17px;color:#111}
+.me-signout{width:100%;padding:16px;border:1px solid #fecaca;background:#fef2f2;color:#dc2626;border-radius:16px;font-weight:800;cursor:pointer;margin-top:14px}
+.region-wrap{padding:14px 12px}.checker-card{background:#eef6e9;border:1.5px solid #d9ecd2;border-radius:18px;padding:18px}.checker-top{display:flex;gap:12px}.checker-icon{width:52px;height:52px;background:#22c55e;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;color:#fff;flex-shrink:0}.checker-top h2{font-size:20px;color:#14532d}.checker-top p{font-size:13px;color:#666}.checker-card label{display:block;font-weight:700;margin:16px 0 8px;font-size:14px}.checker-input{width:100%;padding:15px;background:#fff;border:1px solid #d9ecd2;border-radius:12px;font-size:15px;outline:none}.check-btn{width:100%;padding:16px;border:none;border-radius:12px;background:linear-gradient(90deg,#16a34a,#22c55e);color:#fff;font-weight:800;font-size:16px;cursor:pointer;margin-top:18px}.check-result{background:#fff;border-radius:12px;padding:14px;margin-top:12px;border:1px solid #bbf7d0;display:none}
+.region-info{background:#fff;border-radius:16px;padding:16px;margin-top:12px;border:1px solid #eef2e7}.region-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.region-card{background:#fff;border-radius:14px;padding:14px;text-align:center;border:1px solid #eef2e7;cursor:pointer}.region-card.selected{border-color:#22c55e;background:#f0fdf4}
+.detail-card{background:#fff;border-radius:18px;padding:16px;margin:12px;border:1px solid #eef2e7}.step{display:flex;gap:10px;align-items:center;margin-bottom:12px}.step .num{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#ff0000,#16a34a);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800}.detail-input{width:100%;padding:14px;margin:7px 0;background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;outline:none}.cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}.cat-card{border-radius:16px;padding:16px 8px;text-align:center;cursor:pointer;color:#fff;min-height:120px;display:flex;flex-direction:column;justify-content:center}.cat-card.selected{border:2px solid #111}.cat-blue{background:linear-gradient(160deg,#ff0000,#16a34a)}.cat-dark{background:#1e293b}.pkg-head{display:flex;gap:10px;margin:16px 12px 10px;align-items:center}.pkg-head .ball{width:38px;height:38px;border-radius:50%;background:#22c55e}.pkg-head h3{color:#14532d}.pkg-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 12px}.pkg-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:16px;padding:14px 8px;text-align:center;cursor:pointer;min-height:175px;display:flex;flex-direction:column;justify-content:space-between;position:relative}.pkg-card.selected{border-color:#22c55e;background:#f0fdf4}.pkg-card .p-price{background:#111;color:#fff;padding:11px;border-radius:10px;font-weight:800;margin-top:8px}.pkg-card.selected .p-price{background:#16a34a}.pay-tabs{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px;margin-top:10px}.pay-tabs div{background:#f3f4f6;border:2px solid #e5e7eb;padding:10px 2px;border-radius:12px;text-align:center;font-size:11px;font-weight:700;cursor:pointer}.pay-tabs div.selected{border-color:#22c55e;background:#f0fdf4}.pay-tabs div span{font-size:20px;display:block}.qr-box{background:#fff;border:2px solid #bbf7d0;border-radius:18px;padding:16px;text-align:center;margin:12px 0}.qr-box img{width:190px;height:190px;border-radius:12px}.upi-box{background:#f0fdf4;border:2px dashed #22c55e;padding:12px;border-radius:12px;text-align:center;margin:10px}.complete-card{background:#111;color:#fff;border-radius:18px;padding:16px;margin:12px}.buy-btn{width:100%;padding:16px;border:none;border-radius:14px;background:#16a34a;color:#fff;font-weight:800;font-size:18px;margin-top:14px;cursor:pointer}.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 12px;margin-top:10px}.feat-card{background:#fff;border-radius:16px;padding:14px;display:flex;gap:10px;border:1px solid #eef2e7}.feat-card .f-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px}.green{background:#22c55e}.blue{background:#2563eb}.orange{background:#f59e0b}.purple{background:#a855f7}.btn{background:#16a34a;color:#fff;border:none;width:calc(100% - 24px);margin:10px 12px;padding:14px;border-radius:14px;font-weight:800;cursor:pointer}.btn2{background:#ff0000}.back{margin:12px;background:#fff;padding:9px 12px;border-radius:10px;display:inline-block;cursor:pointer;border:1px solid #e5e7eb}.bottom{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #e5e7eb;display:flex;justify-content:space-around;padding:8px 8px 10px;z-index:50;border-radius:20px 20px 0 0;box-shadow:0 -5px 20px rgba(0,0,0,.08)}.bottom div{text-align:center;font-size:12px;color:#888;flex:1;padding:8px 4px;border-radius:16px;cursor:pointer}.bottom div.active{color:#16a34a;background:#f0fdf4}.bottom .ic{font-size:24px;display:block}.float-wa{position:fixed;bottom:100px;right:14px;width:56px;height:56px;background:#22c55e;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;z-index:60;cursor:pointer;box-shadow:0 8px 20px rgba(34,197,94,.5)}.hero{margin:12px;border-radius:18px;overflow:hidden;position:relative;min-height:300px;background-size:cover;display:flex;flex-direction:column;justify-content:flex-end;padding:16px;color:#fff}.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 20%,rgba(0,0,0,.85) 78%)}.hero>*{position:relative;z-index:2}.hero .big-circle{width:82px;height:82px;border-radius:50%;border:3px solid #fff;overflow:hidden;margin-bottom:10px;background:#fff}.hero .big-circle img{width:100%;height:100%;object-fit:cover}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="logo"><img class="logo-img" src="logo.png"><b>Sangai Store<span>OFFICIAL STORE • MANIPUR</span></b></div><div class="top-right"><span class="inr">INR</span><span class="wallet-mini">🪙 ₹0</span></div></div>
+<div class="search-bar"><span class="menu-btn" onclick="openMe()">☰</span><div class="search-input">🔍 <input id="searchBox" placeholder="Please enter a game - MLBB / PUBG / HOK" oninput="searchGame(this.value)"></div><button class="me-btn" onclick="openMe()">Me</button></div>
+<div class="me-overlay" id="meOverlay" onclick="closeMe()"></div>
+<div class="me-drawer" id="meDrawer"><div class="me-head"><div class="me-logo"><div class="bolt">⚡</div><div><b>Sangai</b><br><span>FAST GAME RECHARGE</span></div></div><button class="me-close" onclick="closeMe()">✕</button></div><div class="me-profile"><div class="av"><img src="logo.png"></div><div><b id="meName">James Ningombam</b><br><span class="member">Member</span></div></div><div class="me-wallet"><div class="wic">🪙</div><div><div style="font-size:13px;color:#666;font-weight:700">INR</div><div style="font-size:19px;font-weight:800">₹0</div></div></div><div class="me-menu"><div class="me-item" onclick="closeMe();showPage('home')"><div class="ic">▦</div><b>Dashboard</b><span>›</span></div><div class="me-item" onclick="closeMe();alert('Wallet: ₹0 - WhatsApp: 6909729845')"><div class="ic">🪙</div><b>Wallet</b><span>›</span></div><div class="me-item" onclick="closeMe();showPage('orders')"><div class="ic">🕐</div><b>Order History</b><span>›</span></div><div class="me-item" onclick="closeMe();showPage('region')"><div class="ic">🌍</div><b>Region Check</b><span>›</span></div><div class="me-item" onclick="closeMe();showPage('sub')"><div class="ic">🏆</div><b>Leaderboard</b><span>›</span></div><div class="me-item" onclick="closeMe();showPage('home')"><div class="ic">✦</div><b>Games</b><span>›</span></div></div><div style="background:#fff;border-radius:16px;padding:14px;margin-top:12px;border:1px solid #eef2e7;display:flex;gap:8px;align-items:center"><span>👤</span><input id="nameInput" placeholder="Ming happa..." style="flex:1;padding:10px;border:1px solid #e5e7eb;border-radius:10px;outline:none;min-width:0"><button onclick="saveName()" style="background:#16a34a;color:#fff;border:none;padding:10px 14px;border-radius:10px;font-weight:800;cursor:pointer">Save</button></div><button class="me-signout" onclick="signOut()">↩ Sign Out</button><div style="text-align:center;font-size:12px;color:#888;margin-top:10px">© 2026 Sangai Official Store</div></div>
+
+<div id="page-home">
+  <div class="cat-scroll">
+    <div class="cat-pill active" onclick="filterCat(this,'ALL')">✦ All</div>
+    <div class="cat-pill" onclick="filterCat(this,'MLBB')">🎮 MLBB</div>
+    <div class="cat-pill" onclick="filterCat(this,'PUBG')">🔫 PUBG</div>
+    <div class="cat-pill" onclick="filterCat(this,'HOK')">👑 HOK</div>
+    <div class="cat-pill" onclick="filterCat(this,'BGMI')">🎯 BGMI</div>
+    <div class="cat-pill" onclick="filterCat(this,'BOOST')">🚀 Boost</div>
+    <div class="cat-pill" onclick="filterCat(this,'YT')">▶️ YouTube</div>
+    <div class="cat-pill" onclick="filterCat(this,'FB')">📘 Facebook</div>
+    <div class="cat-pill" onclick="filterCat(this,'INSTA')">📸 Instagram</div>
+  </div>
+  <div class="banner-wrap"><div class="banner" onclick="openService('MLBB')"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=900&fit=crop"><div class="banner-content"><span class="banner-badge">🦌 SANGAI STORE</span><h2 style="font-size:26px;line-height:1.1;margin-top:8px">MLBB • PUBG • HOK<br><span style="color:#a7f3d0">CHEAPER THAN IN-GAME!</span></h2><p style="font-size:12px;margin-top:6px">⚡ INSTANT • 🛡️ SAFE • 🎁 BEST PRICE IN MANIPUR</p><div style="background:#facc15;color:#000;display:inline-block;padding:8px 14px;border-radius:8px;font-weight:800;font-size:13px;margin-top:8px">🛒 TOP UP NOW →</div></div></div></div>
+  <div class="marquee"><span>MLBB • PUBG UC • HOK TOKENS • BGMI UC • IG FOLLOWERS • YOUTUBE SUBS • FACEBOOK • RANK BOOSTING • INSTANT DELIVERY • WHATSAPP: 6909729845 • SANGAI OFFICIAL STORE •&nbsp;</span></div>
+  <div class="sec-head"><div class="sec-head-left"><div class="ic">🏷️</div><b>Flash Sale!</b></div><div class="timer"><span id="t-d">19<small>d</small></span><span id="t-h">23<small>h</small></span><span id="t-m">59<small>m</small></span><span id="t-s">12<small>s</small></span></div></div>
+  <div class="flash-card" onclick="openService('MLBB_PASS')"><span class="discount
