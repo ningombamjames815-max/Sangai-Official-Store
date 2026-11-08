@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Sangai Official Store</title>
+<title>🦌 Sangai Official Store</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
 body{background:#f6f8f3;padding-bottom:100px;overflow-x:hidden}
@@ -22,7 +22,6 @@ body{background:#f6f8f3;padding-bottom:100px;overflow-x:hidden}
 .cat-scroll::-webkit-scrollbar{display:none}
 .cat-pill{background:#fff;border:1px solid #ddd;padding:11px 14px;border-radius:20px;font-weight:700;font-size:13px;white-space:nowrap;cursor:pointer;flex-shrink:0}
 .cat-pill.active{background:#16a34a;color:#fff}
-/* BANNER FIX - TEXT THOKKANI */
 .banner{margin:0 12px;border-radius:18px;overflow:hidden;position:relative;background:#000;min-height:175px;cursor:pointer}
 .banner img{width:100%;height:175px;object-fit:cover;display:block}
 .banner-content{position:absolute;left:0;top:0;right:0;bottom:0;z-index:5;background:linear-gradient(90deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.5) 60%,transparent);padding:14px;color:#fff;display:flex;flex-direction:column;justify-content:center}
@@ -53,11 +52,14 @@ body{background:#f6f8f3;padding-bottom:100px;overflow-x:hidden}
 .social a{width:58px;height:58px;background:#eef6e9;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;text-decoration:none}
 .footer-green{background:#149a45;padding:28px 16px 40px;color:#fff;margin-top:18px}
 .detail-card{background:#fff;border-radius:18px;padding:16px;margin:12px}
-.detail-input{width:100%;padding:14px;margin:7px 0;border:1px solid #e5e7eb;border-radius:12px}
+.detail-input{width:100%;padding:14px;margin:7px 0;border:1px solid #e5e7eb;border-radius:12px;font-size:15px}
 .pkg-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 12px}
 .pkg{background:#fff;border:1.5px solid #e5e7eb;border-radius:16px;padding:14px 8px;text-align:center;cursor:pointer;min-height:150px}
 .pkg.selected{border-color:#22c55e;background:#f0fdf4}
 .pkg .price{background:#111;color:#fff;padding:11px;border-radius:10px;font-weight:800;margin-top:8px}
+.qty-box{background:#fff;border-radius:18px;padding:16px;margin:12px;border:1px solid #eef2e7}
+.qty-btn{width:42px;height:42px;border-radius:50%;border:1px solid #ddd;background:#fff;font-size:22px;font-weight:800;cursor:pointer}
+.qty-btn.plus{border:none;background:#16a34a;color:#fff}
 .qr{background:#fff;border:2px solid #bbf7d0;border-radius:18px;padding:16px;text-align:center;margin:12px}
 .qr img{width:190px;height:190px}
 .buy{width:100%;padding:16px;border:none;border-radius:14px;background:#16a34a;color:#fff;font-weight:800;font-size:18px;margin-top:14px;cursor:pointer}
@@ -69,7 +71,7 @@ body{background:#f6f8f3;padding-bottom:100px;overflow-x:hidden}
 </head>
 <body>
 <div class="topbar"><div class="logo"><img class="logo-img" src="logo.png" onerror="this.src='https://cdn-icons-png.flaticon.com/512/8085/8085724.png'"><b>Sangai Store<span>OFFICIAL STORE • MANIPUR</span></b></div><div class="top-right"><span class="inr">INR</span><span class="wallet">🪙 ₹0</span></div></div>
-<div class="search-bar"><span style="color:#fff;font-size:28px;cursor:pointer" onclick="alert('Menu - Sangai Store')">☰</span><div class="search-input">🔍 <input id="searchBox" placeholder="Please enter a game" oninput="searchGame(this.value)"></div><button class="me-btn" onclick="alert('Me - James Ningombam\nWallet: ₹0\nWhatsApp: 6909729845')">Me</button></div>
+<div class="search-bar"><span style="color:#fff;font-size:28px;cursor:pointer" onclick="alert('Sangai Store - Menu')">☰</span><div class="search-input">🔍 <input id="searchBox" placeholder="Please enter a game" oninput="searchGame(this.value)"></div><button class="me-btn" onclick="alert('Me - James Ningombam\nWallet: ₹0\nWhatsApp: 6909729845')">Me</button></div>
 
 <div id="page-home">
 <div class="cat-scroll">
@@ -93,6 +95,8 @@ body{background:#f6f8f3;padding-bottom:100px;overflow-x:hidden}
 
 <div class="sec-head"><div><b>🏷️ Flash Sale!</b></div><div class="timer"><span id="t-d">19d</span><span id="t-h">23h</span><span id="t-m">59m</span><span id="t-s">12s</span></div></div>
 <div class="flash-card" onclick="openService('MLBB')"><img src="https://cdn-icons-png.flaticon.com/512/1786/1786808.png"><div><b>WEEKLY DIAMOND PASS</b><div style="font-size:12px;color:#888">OFFER PACK - LIMITED</div><div style="margin-top:8px"><span style="text-decoration:line-through;color:#888">₹181</span> <b style="font-size:19px">₹145</b> <span style="background:#16a34a;color:#fff;padding:2px 8px;border-radius:6px;font-size:12px">-20%</span></div></div></div>
+
+<div style="background:#fff;border-radius:16px;padding:14px;margin:14px 12px 0;text-align:center;border:1px solid #eef2e7">📦 Total Orders: <b id="totalOrdersHome" style="color:#16a34a">1,250+</b> • Today: <b style="color:#ff0000">42 Orders</b> • ✅ Delivered • ⚡ Instant</div>
 
 <div class="hot-title">🎮 GAME RECHARGE</div>
 <div class="grid">
@@ -123,19 +127,36 @@ body{background:#f6f8f3;padding-bottom:100px;overflow-x:hidden}
 <div style="margin:12px;background:#fff;padding:9px 12px;border-radius:10px;display:inline-block;cursor:pointer" onclick="goHome()">← Back</div>
 <div style="margin:12px;background:#111;color:#fff;border-radius:18px;padding:20px"><h1 id="heroTitle">Honor Of Kings</h1><p id="heroDesc">Top up now easy!</p></div>
 <div class="detail-card"><h3>1. ENTER IDS</h3><p id="detailSub">Enter HOK ID & Server</p><input class="detail-input" id="gameId" placeholder="USER ID - happa yai"><input class="detail-input" id="serverId" placeholder="Server / Zone ID / Link"><input class="detail-input" id="ign" placeholder="IGN / Name / Rank"><button onclick="checkName()" style="width:100%;padding:14px;border:none;border-radius:12px;background:#16a34a;color:#fff;font-weight:800;cursor:pointer">✓ Check Name</button><p id="checkResult" style="text-align:center;color:#16a34a;margin-top:8px"></p></div>
-<div style="margin:16px 12px"><h3>SELECT PACKAGE</h3></div>
+<div style="margin:16px 12px"><h3>2. SELECT PACKAGE</h3></div>
 <div id="pkgBox"><div class="pkg-grid" id="hok"></div><div class="pkg-grid" id="pubg" style="display:none"></div><div class="pkg-grid" id="bgmi" style="display:none"></div><div class="pkg-grid" id="small" style="display:none"></div><div class="pkg-grid" id="boost" style="display:none"></div><div class="pkg-grid" id="yt_subs" style="display:none"></div><div class="pkg-grid" id="insta_follow" style="display:none"></div><div class="pkg-grid" id="fb_follow" style="display:none"></div></div>
+
+<!-- QUANTITY + ORDER COUNT - PUNNA -->
+<div class="qty-box">
+<div style="display:flex;justify-content:space-between;align-items:center">
+<div><b>Quantity - Masa Matum?</b><br><small style="color:#888">Pack masa matum leigadabano?</small></div>
+<div style="display:flex;gap:8px;align-items:center">
+<button class="qty-btn" onclick="changeQty(-1)">−</button>
+<span id="qtyNum" style="font-size:22px;font-weight:800;min-width:30px;text-align:center">1</span>
+<button class="qty-btn plus" onclick="changeQty(1)">+</button>
+</div>
+</div>
+<div style="display:flex;justify-content:space-between;margin-top:12px;font-weight:800"><span>Total:</span><span id="qtyTotal" style="color:#16a34a;font-size:19px">Rs. 21</span></div>
+<div style="text-align:center;font-size:12px;color:#888;margin-top:8px">📦 Total Orders: <b id="totalOrders" style="color:#16a34a">1,250+</b> • Today: <b style="color:#ff0000">42 Orders</b> • ✅ Delivered</div>
+</div>
+
 <div class="detail-card"><h3>3. SELECT PAYMENT</h3><p>QR scan toubiyu - WhatsApp: 6909729845</p><div class="qr"><p><b>📷 QR Code Scan Toubiyu</b></p><img id="qrImg" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=upi://pay?pa=haobijamtenis@okicici"><div style="font-weight:800;margin-top:8px">🦌 SANGAI OFFICIAL STORE</div><div style="color:#ff0000;font-weight:700">UPI: haobijamtenis@okicici</div><div>Pay: <b id="qrAmt" style="color:#16a34a;font-size:20px">₹21</b> <span id="qrPack">(16 Tokens)</span></div><button onclick="copyUPI()" style="margin-top:10px;padding:10px 18px;border:none;border-radius:10px;background:#16a34a;color:#fff;font-weight:800;cursor:pointer">📋 Copy UPI ID</button></div><p>Selected: <b id="showPack">HOK - 16 Tokens - ₹21</b></p><p>Payment Screenshot Upload Tou</p><input type="file" accept="image/*" style="width:100%;padding:10px;background:#f9fafb;border-radius:10px"></div>
 <div class="detail-card"><h3>4. COMPLETE ORDER</h3><div style="display:flex;justify-content:space-between;font-weight:800"><span>Total:</span><span id="totalPrice">Rs. 21</span></div></div>
 <button class="buy" style="margin:10px 12px;width:calc(100% - 24px)" onclick="sendOrder()">🛒 Buy Now - WhatsApp Ta Thabiyu</button>
 <button class="buy" style="margin:0 12px;width:calc(100% - 24px);background:#ff0000" onclick="window.open('https://wa.me/916909729845','_blank')">💬 WhatsApp: 6909729845</button>
 </div>
 
-<div class="bottom"><div class="active" onclick="goHome()">🏠<br>Home</div><div onclick="alert('Region - MLBB Checker\nUser ID + Server ID happiyu')">🌍<br>Region</div><div onclick="window.open('https://wa.me/916909729845','_blank')">📋<br>Orders</div><div onclick="alert('Leaderboard - James Ningombam 🏆')">🎫<br>Subscription</div></div>
+<div class="bottom"><div class="active" onclick="goHome()">🏠<br>Home</div><div onclick="alert('Region - MLBB Checker')">🌍<br>Region</div><div onclick="window.open('https://wa.me/916909729845','_blank')">📋<br>Orders</div><div onclick="alert('Leaderboard - James Ningombam 🏆')">🎫<br>Subscription</div></div>
 <div class="float-wa" onclick="window.open('https://wa.me/916909729845?text=Hello%20Sangai%20Official%20Store!','_blank')">💬</div>
 
 <script>
-let currentGame='HOK',selectedPack='16 Tokens',selectedPrice=21;
+let currentGame='HOK',selectedPack='16 Tokens',selectedPrice=21,qty=1;
+let orderCount=1250;
+try{let s=localStorage.getItem('sangaiOrders');if(s)orderCount=parseInt(s)}catch(e){}
 let packs={
 hok:[["16 Tokens",21,"🪙"],["80 Tokens",100,"🪙"],["240 Tokens",276,"🪙"],["400 Tokens",470,"🪙"],["560 Tokens",640,"🪙"],["830 Tokens",940,"🪙"],["1245 Tokens",1367,"👑"],["2508 Tokens",2792,"👑"]],
 pubg:[["60 UC",79,"🔫"],["120 UC",159,"🔫"],["325 UC",399,"🔫"],["660 UC",799,"🔫"],["1800 UC",2199,"🔫"],["8100 UC",8999,"🔫"]],
@@ -143,12 +164,4 @@ bgmi:[["60 UC",68,"🎯"],["300 UC",342,"🎯"],["600 UC",683,"🎯"],["1500 UC"
 small:[["5 Dia",12,"💎"],["11 Dia",23,"💎"],["56 Dia",98,"💎"],["86 Dia",122,"💎"],["165 Dia",231,"💎"],["257 Dia",350,"💎"],["514 Dia",700,"💎"],["706 Dia",947,"💎"],["1049 Dia",1418,"💎"],["2195 Dia",2865,"💎"],["Weekly Pass",141,"🎫"],["Twilight Pass",795,"🎫"]],
 boost:[["MASTER to GM ₹250",250,"🚀"],["GM to EPIC ₹375",375,"🚀"],["EPIC to LEGEND ₹500",500,"🚀"],["LEGEND to MYTHIC ₹625",625,"🚀"],["MYTHIC Points ₹250",250,"⭐"]],
 yt_subs:[["100 Subs",250,"▶️"],["500 Subs",1050,"▶️"],["1000 Subs",1950,"▶️"],["5000 Subs",9300,"▶️"]],
-insta_follow:[["500 Followers",179,"📸"],["1000 Followers",299,"📸"],["2000 Followers",549,"📸"],["5000 Followers",1299,"📸"]],
-fb_follow:[["500 Followers",149,"📘"],["1000 Followers",249,"📘"],["2000 Followers",449,"📘"],["5000 Followers",999,"📘"]]
-};
-let endTime=Date.now()+19*24*60*60*1000;
-setInterval(()=>{let d=endTime-Date.now();if(d<0)d=0;let dd=Math.floor(d/86400000);let hh=Math.floor(d%86400000/3600000);let mm=Math.floor(d%3600000/60000);let ss=Math.floor(d%60000/1000);document.getElementById('t-d').innerText=dd+'d';document.getElementById('t-h').innerText=hh+'h';document.getElementById('t-m').innerText=mm+'m';document.getElementById('t-s').innerText=ss+'s'},1000);
-function goHome(){document.getElementById('page-home').classList.remove('hidden');document.getElementById('detail').classList.add('hidden');window.scrollTo(0,0)}
-function filterCat(el,cat){document.querySelectorAll('.cat-pill').forEach(c=>c.classList.remove('active'));el.classList.add('active');document.querySelectorAll('.card').forEach(c=>{if(cat==='ALL')c.style.display='block';else c.style.display=c.dataset.cat===cat?'block':'none'});goHome()}
-function searchGame(v){v=v.toLowerCase();document.querySelectorAll('.card').forEach(c=>{c.style.display=c.innerText.toLowerCase().includes(v)?'block':'none'});if(v)goHome()}
-function updateQR(){let link='upi://pay?pa=haobijamtenis@okicici&pn=Sangai&am='+selectedPrice+'&cu=INR';document.getElementById('qrImg').src='https://api.qrserver.com/v1/create-qr-code/?size=300x300&data='+encodeURIComponent(link);document.getElementById('qrAmt').innerText='₹'+selectedPrice;document.getElementById('qrPack').innerText='('+sele
+insta_follow:[["500 Followers",179,"📸"],["1000 Followers",299,"📸"],["2000 F
