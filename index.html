@@ -19,7 +19,6 @@ body{background:#f6f8f3;padding-bottom:100px;overflow-x:hidden}
 .search-input input::placeholder{color:#fff}
 .me-btn{background:#facc15;border:none;padding:13px 14px;border-radius:12px;font-weight:700;cursor:pointer}
 .cat-scroll{display:flex;gap:8px;overflow-x:auto;padding:12px;scrollbar-width:none}
-.cat-scroll::-webkit-scrollbar{display:none}
 .cat-pill{background:#fff;border:1px solid #ddd;padding:11px 14px;border-radius:20px;font-weight:700;font-size:13px;white-space:nowrap;cursor:pointer;flex-shrink:0}
 .cat-pill.active{background:#16a34a;color:#fff}
 .banner{margin:0 12px;border-radius:18px;overflow:hidden;position:relative;background:#000;min-height:175px;cursor:pointer}
@@ -37,7 +36,7 @@ body{background:#f6f8f3;padding-bottom:100px;overflow-x:hidden}
 .flash-card img{width:78px;height:78px;border-radius:12px;object-fit:cover}
 .hot-title{margin:20px 12px 10px;font-weight:800;color:#166534}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 12px}
-.card{background:#fff;border-radius:18px;padding:14px 8px;text-align:center;cursor:pointer;border:1px solid #eef2e7;box-shadow:0 4px 14px rgba(0,0,0,.06);touch-action:manipulation;user-select:none}
+.card{background:#fff;border-radius:18px;padding:14px 8px;text-align:center;cursor:pointer;border:1px solid #eef2e7;box-shadow:0 4px 14px rgba(0,0,0,.06);touch-action:manipulation}
 .card:active{transform:scale(.97);background:#f0fdf4}
 .card .circle{width:70px;height:70px;border-radius:50%;border:2px solid #eee;margin:8px auto;overflow:hidden;pointer-events:none}
 .card .circle img{width:100%;height:100%;object-fit:cover;pointer-events:none}
@@ -56,7 +55,7 @@ body{background:#f6f8f3;padding-bottom:100px;overflow-x:hidden}
 .detail-input{width:100%;padding:14px;margin:7px 0;border:1px solid #e5e7eb;border-radius:12px;font-size:15px}
 .pkg-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 12px}
 .pkg{background:#fff;border:1.5px solid #e5e7eb;border-radius:16px;padding:14px 8px;text-align:center;cursor:pointer;min-height:150px;touch-action:manipulation}
-.pkg.selected{border-color:#22c55e;background:#f0fdf4}
+.pkg.selected{border:2px solid #22c55e;background:#f0fdf4}
 .pkg .price{background:#111;color:#fff;padding:11px;border-radius:10px;font-weight:800;margin-top:8px}
 .qty-box{background:#fff;border-radius:18px;padding:16px;margin:12px;border:1px solid #eef2e7}
 .qty-btn{width:42px;height:42px;border-radius:50%;border:1px solid #ddd;background:#fff;font-size:22px;font-weight:800;cursor:pointer}
@@ -76,17 +75,7 @@ body{background:#f6f8f3;padding-bottom:100px;overflow-x:hidden}
 <div class="search-bar"><button onclick="openMenu()" style="background:transparent;border:none;color:#fff;font-size:30px;cursor:pointer;padding:4px 6px">☰</button><div class="search-input">🔍 <input id="searchBox" placeholder="Please enter a game" oninput="searchGame(this.value)"></div><button onclick="clearSearch()" style="background:#fff;border:none;padding:13px 10px;border-radius:12px;font-weight:800;cursor:pointer">✕</button><button class="me-btn" onclick="showPage('orders')">Me</button></div>
 
 <div id="page-home">
-<div class="cat-scroll">
-<div class="cat-pill active" onclick="filterCat(this,'ALL')">✦ All</div>
-<div class="cat-pill" onclick="filterCat(this,'MLBB')">🎮 MLBB</div>
-<div class="cat-pill" onclick="filterCat(this,'PUBG')">🔫 PUBG</div>
-<div class="cat-pill" onclick="filterCat(this,'HOK')">👑 HOK</div>
-<div class="cat-pill" onclick="filterCat(this,'BGMI')">🎯 BGMI</div>
-<div class="cat-pill" onclick="filterCat(this,'BOOST')">🚀 Boost</div>
-<div class="cat-pill" onclick="filterCat(this,'YT')">▶️ YouTube</div>
-<div class="cat-pill" onclick="filterCat(this,'FB')">📘 Facebook</div>
-<div class="cat-pill" onclick="filterCat(this,'INSTA')">📸 Instagram</div>
-</div>
+<div class="cat-scroll"><div class="cat-pill active" onclick="filterCat(this,'ALL')">✦ All</div><div class="cat-pill" onclick="filterCat(this,'MLBB')">🎮 MLBB</div><div class="cat-pill" onclick="filterCat(this,'PUBG')">🔫 PUBG</div><div class="cat-pill" onclick="filterCat(this,'HOK')">👑 HOK</div><div class="cat-pill" onclick="filterCat(this,'BGMI')">🎯 BGMI</div><div class="cat-pill" onclick="filterCat(this,'BOOST')">🚀 Boost</div><div class="cat-pill" onclick="filterCat(this,'YT')">▶️ YouTube</div><div class="cat-pill" onclick="filterCat(this,'FB')">📘 Facebook</div><div class="cat-pill" onclick="filterCat(this,'INSTA')">📸 Instagram</div></div>
 <div class="banner" onclick="openService('MLBB')"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=900&fit=crop"><div class="banner-content"><span class="banner-badge">🦌 SANGAI STORE</span><h2>MLBB • PUBG • HOK<br><span style="color:#a7f3d0">CHEAPER THAN IN-GAME!</span></h2><p style="font-size:11px;margin-top:6px">⚡ INSTANT • 🛡️ SAFE • 🎁 BEST PRICE IN MANIPUR</p><div class="banner-btn">🛒 TOP UP NOW →</div></div></div>
 <div class="marquee"><span>MLBB • PUBG UC • HOK • BGMI • IG • YOUTUBE • FACEBOOK • RANK BOOSTING • WHATSAPP: 6909729845 •&nbsp;</span></div>
 <div class="sec-head"><div><b>🏷️ Flash Sale!</b></div><div class="timer"><span id="t-d">19d</span><span id="t-h">23h</span><span id="t-m">59m</span><span id="t-s">12s</span></div></div>
@@ -122,11 +111,22 @@ body{background:#f6f8f3;padding-bottom:100px;overflow-x:hidden}
 <div id="page-orders" class="hidden"><div class="page-card" style="text-align:center"><div style="font-size:48px">📦</div><h2 style="margin:10px 0">My Orders</h2><p style="color:#666;font-size:13px">Order History - WhatsApp ta check toubiyu</p><p style="margin-top:10px">📦 Total Orders: <b id="totalOrdersPage" style="color:#16a34a">1,250+</b></p><button class="buy" onclick="window.open('https://wa.me/916909729845?text=Hello%20Sangai%20Store!%20Order%20History','_blank')">💬 WhatsApp - 6909729845</button><button class="buy" style="background:#f59e0b;color:#000" onclick="showPage('home')">🛒 Order Amuk Leiyu →</button></div></div>
 <div id="page-sub" class="hidden"><div class="page-card" style="text-align:center"><div style="font-size:48px">🏆</div><h2 style="margin:10px 0">Leaderboard</h2><p style="color:#666;font-size:13px">Top Customer: James Ningombam - 50K+ Orders 🏆</p><button class="buy" onclick="openService('MLBB')">🎫 Pass Leiyu →</button></div></div>
 
+<!-- DETAIL - PACK LIST CHUMMI HTML DA LEIRE, JS NGAITABA -->
 <div id="detail" class="hidden">
 <div style="margin:12px;background:#fff;padding:9px 12px;border-radius:10px;display:inline-block;cursor:pointer" onclick="goHome()">← Back</div>
 <div style="margin:12px;background:#111;color:#fff;border-radius:18px;padding:20px"><h1 id="heroTitle">Honor Of Kings</h1><p id="heroDesc">Top up now easy!</p></div>
 <div class="detail-card"><h3>1. ENTER IDS</h3><p id="detailSub">Enter HOK ID & Server</p><input class="detail-input" id="gameId" placeholder="USER ID - happa yai"><input class="detail-input" id="serverId" placeholder="Server / Zone ID / Link"><input class="detail-input" id="ign" placeholder="IGN / Name / Rank"><button onclick="checkName()" style="width:100%;padding:14px;border:none;border-radius:12px;background:#16a34a;color:#fff;font-weight:800;cursor:pointer">✓ Check Name</button><p id="checkResult" style="text-align:center;color:#16a34a;margin-top:8px"></p></div>
-<div style="margin:16px 12px"><h3>2. SELECT PACKAGE</h3></div>
-<div id="pkgBox"><div class="pkg-grid" id="hok"></div><div class="pkg-grid" id="pubg" style="display:none"></div><div class="pkg-grid" id="bgmi" style="display:none"></div><div class="pkg-grid" id="small" style="display:none"></div><div class="pkg-grid" id="boost" style="display:none"></div><div class="pkg-grid" id="yt_subs" style="display:none"></div><div class="pkg-grid" id="insta_follow" style="display:none"></div><div class="pkg-grid" id="fb_follow" style="display:none"></div></div>
-<div class="qty-box"><div style="display:flex;justify-content:space-between;align-items:center"><div><b>Quantity - Masa Matum?</b><br><small style="color:#888">Pack masa matum leigadabano?</small></div><div style="display:flex;gap:8px;align-items:center"><button class="qty-btn" onclick="changeQty(-1)">−</button><span id="qtyNum" style="font-size:22px;font-weight:800;min-width:30px;text-align:center">1</span><button class="qty-btn plus" onclick="changeQty(1)">+</button></div></div><div style="display:flex;justify-content:space-between;margin-top:12px;font-weight:800"><span>Total:</span><span id="qtyTotal" style="color:#16a34a;font-size:19px">Rs. 21</span></div><div style="text-align:center;font-size:12px;color:#888;margin-top:8px">📦 Total Orders: <b id="totalOrders" style="color:#16a34a">1,250+</b> • Today: <b style="color:#ff0000">42 Orders</b> • ✅ Delivered</div></div>
-<div class="detail-card"><h3>3. SELECT PAYMENT</h3><p>QR scan toubiyu - WhatsApp: 6909729845</p><div class="qr"
+<div style="margin:16px 12px"><h3>2. SELECT PACKAGE - PACK NAMBIYU 👇</h3></div>
+
+<!-- MLBB PACKS -->
+<div class="pkg-grid" id="small">
+<div class="pkg selected" onclick="selectPack(this,'5 Dia',12)"><b>5 Dia</b><div style="font-size:34px;margin:10px 0">💎</div><div class="price">₹12</div></div>
+<div class="pkg" onclick="selectPack(this,'11 Dia',23)"><b>11 Dia</b><div style="font-size:34px;margin:10px 0">💎</div><div class="price">₹23</div></div>
+<div class="pkg" onclick="selectPack(this,'56 Dia',98)"><b>56 Dia</b><div style="font-size:34px;margin:10px 0">💎</div><div class="price">₹98</div></div>
+<div class="pkg" onclick="selectPack(this,'86 Dia',122)"><b>86 Dia</b><div style="font-size:34px;margin:10px 0">💎</div><div class="price">₹122</div></div>
+<div class="pkg" onclick="selectPack(this,'165 Dia',231)"><b>165 Dia</b><div style="font-size:34px;margin:10px 0">💎</div><div class="price">₹231</div></div>
+<div class="pkg" onclick="selectPack(this,'257 Dia',350)"><b>257 Dia</b><div style="font-size:34px;margin:10px 0">💎</div><div class="price">₹350</div></div>
+<div class="pkg" onclick="selectPack(this,'514 Dia',700)"><b>514 Dia</b><div style="font-size:34px;margin:10px 0">💎</div><div class="price">₹700</div></div>
+<div class="pkg" onclick="selectPack(this,'706 Dia',947)"><b>706 Dia</b><div style="font-size:34px;margin:10px 0">💎</div><div class="price">₹947</div></div>
+<div class="pkg" onclick="selectPack(this,'1049 Dia',1418)"><b>1049 Dia</b><div style="font-size:34px;margin:10px 0">💎</div><div class="price">₹1418</div></div>
+<
