@@ -3,141 +3,753 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sangai Official Store - Instant Game Top-Up</title>
-  <!-- Tailwind CSS & FontAwesome Icons -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <title>MLBB Diamond Top-Up Store | Instant Delivery</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --primary: #00b894;
+      --primary-dark: #009678;
+      --bg: #f4f7f6;
+      --card: #ffffff;
+      --text: #1e272e;
+      --muted: #636e72;
+      --border: #dfe6e9;
+      --danger: #d63031;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      padding-bottom: 80px;
+    }
+
+    /* Top Header */
+    header {
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .header-left i {
+      font-size: 20px;
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      color: var(--primary-dark);
+    }
+
+    .logo-badge {
+      background: linear-gradient(135deg, #00b894, #0984e3);
+      color: white;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-weight: 900;
+    }
+
+    .wallet-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: 1.5px solid var(--primary);
+      border-radius: 30px;
+      padding: 3px 4px 3px 12px;
+      background: #f0fdf9;
+    }
+
+    .wallet-text {
+      line-height: 1.1;
+    }
+
+    .wallet-text small {
+      font-size: 10px;
+      color: var(--muted);
+      display: block;
+    }
+
+    .wallet-text strong {
+      font-size: 14px;
+      color: var(--primary-dark);
+    }
+
+    .wallet-plus {
+      background: var(--primary);
+      color: white;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+    }
+
+    /* Hero Wallpaper Banner */
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 14px;
+    }
+
+    .hero-banner {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      height: 175px;
+      background: linear-gradient(120deg, rgba(10, 25, 47, 0.85), rgba(0, 184, 148, 0.65)),
+                  url('https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 18px;
+      color: white;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      margin-bottom: 16px;
+    }
+
+    .hero-tag {
+      background: var(--primary);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      width: fit-content;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .hero-banner h1 {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .hero-banner p {
+      font-size: 12px;
+      opacity: 0.92;
+    }
+
+    /* Search Bar */
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border-radius: 12px;
+      padding: 10px 14px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      width: 100%;
+      margin-left: 10px;
+      font-size: 14px;
+    }
+
+    /* User ID Input Section */
+    .uid-card {
+      background: var(--card);
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+      border: 1px solid var(--border);
+    }
+
+    .uid-card h3 {
+      font-size: 15px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--primary-dark);
+    }
+
+    .uid-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 10px;
+    }
+
+    .uid-grid input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .uid-grid input:focus {
+      border-color: var(--primary);
+    }
+
+    /* Product List */
+    .section-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 14px 0 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .product-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .product-card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1.5px solid var(--border);
+      transition: 0.2s;
+      position: relative;
+    }
+
+    .product-card.selected {
+      border-color: var(--primary);
+      background: #f0fdf9;
+    }
+
+    .product-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      max-width: 65%;
+    }
+
+    .diamond-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #00838f;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .product-info h4 {
+      font-size: 13.5px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .badge-stock {
+      display: inline-block;
+      font-size: 10px;
+      background: #ffeaa7;
+      color: #d63031;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-top: 3px;
+    }
+
+    .product-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .price-box {
+      text-align: right;
+    }
+
+    .old-price {
+      font-size: 11px;
+      color: var(--muted);
+      text-decoration: line-through;
+      display: block;
+    }
+
+    .new-price {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--primary-dark);
+    }
+
+    .buy-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .buy-btn:disabled {
+      background: #b2bec3;
+      cursor: not-allowed;
+    }
+
+    /* Guide & Rules Card */
+    .info-box {
+      background: var(--card);
+      border-radius: 14px;
+      padding: 16px;
+      margin-top: 18px;
+      border: 1px solid var(--border);
+      font-size: 13px;
+      line-height: 1.6;
+      color: #2d3436;
+    }
+
+    .info-box h3 {
+      font-size: 15px;
+      margin-bottom: 8px;
+      color: var(--primary-dark);
+    }
+
+    /* Why Choose Us Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .feature-card {
+      background: var(--card);
+      border-radius: 14px;
+      padding: 18px 12px;
+      text-align: center;
+      border: 1px solid var(--border);
+    }
+
+    .feature-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--primary);
+      color: white;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin: 0 auto 10px;
+    }
+
+    .feature-card h4 {
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    /* Social & Support Section */
+    .support-card {
+      background: var(--card);
+      border-radius: 14px;
+      padding: 20px 16px;
+      margin-top: 16px;
+      text-align: center;
+      border: 1px solid var(--border);
+    }
+
+    .support-card h3 {
+      font-size: 17px;
+      margin-bottom: 6px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin: 14px 0;
+    }
+
+    .social-icons a {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+    .wa { background: #25D366; }
+    .yt { background: #FF0000; }
+
+    /* Floating WhatsApp Button */
+    .floating-wa {
+      position: fixed;
+      right: 16px;
+      bottom: 76px;
+      width: 52px;
+      height: 52px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.45);
+      z-index: 99;
+      text-decoration: none;
+    }
+
+    /* Bottom Navigation */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #ffffff;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-around;
+      padding: 8px 0;
+      z-index: 100;
+    }
+
+    .nav-item {
+      text-align: center;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 11px;
+      position: relative;
+    }
+
+    .nav-item.active {
+      color: var(--primary-dark);
+      font-weight: 700;
+    }
+
+    .nav-item i {
+      font-size: 18px;
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .alert-dot {
+      position: absolute;
+      top: -3px;
+      right: 4px;
+      background: var(--primary);
+      color: white;
+      font-size: 9px;
+      padding: 1px 5px;
+      border-radius: 10px;
+    }
+
+    /* Checkout Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      z-index: 200;
+    }
+
+    .modal-box {
+      background: white;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .modal-box h3 {
+      margin-bottom: 8px;
+      color: var(--primary-dark);
+    }
+
+    .qr-placeholder {
+      width: 170px;
+      height: 170px;
+      margin: 12px auto;
+      border: 2px dashed var(--primary);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: var(--muted);
+      padding: 10px;
+    }
+
+    .modal-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .btn-wa-order {
+      flex: 1;
+      background: #25D366;
+      color: white;
+      border: none;
+      padding: 11px;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .btn-close {
+      background: #dfe6e9;
+      border: none;
+      padding: 11px 16px;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  </style>
 </head>
-<body class="bg-[#0b0f19] text-gray-100 min-h-screen flex flex-col font-sans">
+<body>
 
-  <!-- ================= NAVBAR ================= -->
-  <nav class="sticky top-0 z-50 bg-[#111827]/90 backdrop-blur-md border-b border-gray-800">
-    <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
-      <div class="flex items-center space-x-3">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-yellow-500 to-amber-300 flex items-center justify-center font-black text-black text-xl shadow-lg shadow-yellow-500/20">
-          S
-        </div>
-        <div>
-          <a href="#" class="font-extrabold text-lg tracking-wide text-white">SANGAI <span class="text-yellow-400">STORE</span></a>
-          <p class="text-[10px] text-gray-400">Direct WhatsApp Top-Up</p>
-        </div>
-      </div>
-
-      <div class="flex items-center space-x-4">
-        <a href="#" class="text-sm font-semibold text-gray-300 hover:text-yellow-400 flex items-center gap-1.5">
-          <i class="fa-solid fa-house text-xs"></i> Home
-        </a>
-        <button onclick="toggleModal('loginModal')" class="bg-yellow-500 hover:bg-yellow-400 text-black text-xs font-bold px-4 py-2 rounded-lg flex items-center gap-1.5 transition">
-          <i class="fa-solid fa-user text-xs"></i> Login
-        </button>
+  <!-- Header -->
+  <header>
+    <div class="header-left">
+      <i class="fa-solid fa-bars"></i>
+      <div class="logo">
+        <span class="logo-badge">SO</span>
+        <span>SANGAI OFFICIAL</span>
       </div>
     </div>
+    <div class="wallet-pill">
+      <div class="wallet-text">
+        <small>Store Coins</small>
+        <strong>0</strong>
+      </div>
+      <div class="wallet-plus"><i class="fa-solid fa-plus"></i></div>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Hero Wallpaper Banner -->
+    <div class="hero-banner">
+      <span class="hero-tag">⚡ Instant Auto-Delivery</span>
+      <h1>MLBB India / Global</h1>
+      <p>24/7 Safe, Legitimate & Cheapest Diamond Top-Up in INR</p>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-box">
+      <i class="fa-solid fa-magnifying-glass" style="color:#636e72;"></i>
+      <input type="text" id="searchInput" placeholder="Search diamond pack (e.g., Weekly Pass, 86)..." onkeyup="filterProducts()" />
+    </div>
+
+    <!-- Player ID & Server ID Input -->
+    <div class="uid-card">
+      <h3><i class="fa-solid fa-gamepad"></i> 1. Enter Game Details</h3>
+      <div class="uid-grid">
+        <input type="number" id="playerId" placeholder="Player ID (UID)" required />
+        <input type="number" id="serverId" placeholder="Server ID (Zone)" required />
+      </div>
+    </div>
+
+    <!-- Product List -->
+    <div class="section-title">
+      <span>2. Select Diamond Package</span>
+      <span style="font-size:12px; color:#009678;" id="productCount">16 Packs</span>
+    </div>
+
+    <div class="product-list" id="productList"></div>
+
+    <!-- Rules & Combos Info -->
+    <div class="info-box">
+      <h3><i class="fa-solid fa-circle-info"></i> Important Rules & Info</h3>
+      <p>
+        • Choose Diamond amount & enter correct <strong>Player ID (UID)</strong> and <strong>Server ID</strong>.<br>
+        • <strong>Double Diamond Packs:</strong> Can only be claimed once per account in a lifetime.<br>
+        • Once payment is verified, diamonds are credited within seconds.
+      </p>
+    </div>
+
+    <!-- Why Choose Us -->
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+        <h4>24/7 INSTANT DELIVERY</h4>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h4>100% SAFE AND LEGITIMATE</h4>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-globe"></i></div>
+        <h4>EASY & SECURE PAYMENTS</h4>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-comments"></i></div>
+        <h4>24/7 INSTANT SUPPORT</h4>
+      </div>
+    </div>
+
+    <!-- Support & Socials -->
+    <div class="support-card">
+      <h3>Latest News and Support!</h3>
+      <p style="font-size:12px; color:#636e72;">Follow us for exclusive offers & giveaways</p>
+      <div class="social-icons">
+        <a href="#" class="ig"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.me/910000000000" class="wa"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#" class="yt"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+      <p style="font-size:11px; color:#636e72;">Copyright © Sangai Official Store. All rights reserved.</p>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/910000000000" target="_blank" class="floating-wa" title="Contact us on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <a href="#" class="nav-item active"><i class="fa-solid fa-house"></i>Home</a>
+    <a href="#" class="nav-item"><i class="fa-solid fa-cart-shopping"></i>Cart</a>
+    <a href="#" class="nav-item"><span class="alert-dot">1</span><i class="fa-solid fa-bell"></i>Alerts</a>
+    <a href="#" class="nav-item"><i class="fa-solid fa-right-to-bracket"></i>Login</a>
   </nav>
 
-  <!-- ================= MAIN CONTAINER ================= -->
-  <main class="max-w-4xl mx-auto w-full px-4 py-6 flex-1">
-    
-    <!-- Step 1: Select Game -->
-    <section class="mb-6">
-      <h3 class="text-xs uppercase tracking-wider text-yellow-400 font-bold mb-3 flex items-center gap-2">
-        <span class="w-5 h-5 rounded-full bg-yellow-400 text-black flex items-center justify-center text-xs">1</span>
-        Select Game
-      </h3>
-      <div class="grid grid-cols-2 gap-3">
-        <button type="button" onclick="selectGame('MLBB')" id="game-btn-mlbb" class="p-3.5 rounded-xl border-2 border-yellow-400 bg-gray-900 text-center font-bold text-sm flex items-center justify-center gap-2 transition">
-          <i class="fa-solid fa-gamepad text-yellow-400"></i> Mobile Legends
-        </button>
-        <button type="button" onclick="selectGame('BGMI')" id="game-btn-bgmi" class="p-3.5 rounded-xl border-2 border-gray-800 bg-gray-900 text-center font-bold text-sm flex items-center justify-center gap-2 transition">
-          <i class="fa-solid fa-crosshairs text-gray-400"></i> BGMI / PUBG
-        </button>
+  <!-- Payment Modal -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="modal-box">
+      <h3>Complete Your Payment</h3>
+      <p id="modalSummary" style="font-size:13px; color:#2d3436; margin-bottom:6px;"></p>
+      <div class="qr-placeholder">
+        <!-- Nanggi UPI QR Code image URL asida hapchinbiyu -->
+        <span>Upload/Link Your UPI QR Code Here<br>(GPay / PhonePe / BHIM)</span>
       </div>
-    </section>
-
-    <!-- Step 2: Player Details & ID Verification -->
-    <section class="mb-6 bg-gray-900 p-5 rounded-2xl border border-gray-800">
-      <h3 class="text-xs uppercase tracking-wider text-yellow-400 font-bold mb-3 flex items-center gap-2">
-        <span class="w-5 h-5 rounded-full bg-yellow-400 text-black flex items-center justify-center text-xs">2</span>
-        Enter Player ID & Check Username
-      </h3>
-      
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-        <div>
-          <label class="block text-xs font-semibold text-gray-400 mb-1">User ID / Character ID</label>
-          <input type="text" id="userId" placeholder="Enter User ID (press Enter)" class="w-full bg-gray-950 border border-gray-700 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-yellow-400 text-white" />
-        </div>
-        <div id="zoneIdContainer">
-          <label class="block text-xs font-semibold text-gray-400 mb-1">Zone ID (Server)</label>
-          <input type="text" id="zoneId" placeholder="Enter Zone ID (press Enter)" class="w-full bg-gray-950 border border-gray-700 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-yellow-400 text-white" />
-        </div>
+      <p style="font-size:12px; color:#636e72;">Scan QR & pay, then send screenshot on WhatsApp for instant top-up.</p>
+      <div class="modal-actions">
+        <button class="btn-close" onclick="closeModal()">Cancel</button>
+        <button class="btn-wa-order" onclick="sendWhatsAppOrder()"><i class="fa-brands fa-whatsapp"></i> Send Order on WhatsApp</button>
       </div>
+    </div>
+  </div>
 
-      <div class="mt-3 flex items-center justify-between flex-wrap gap-2">
-        <button type="button" onclick="checkUsername()" class="bg-gray-800 hover:bg-gray-700 border border-gray-700 text-yellow-400 text-xs font-semibold px-4 py-2 rounded-lg flex items-center gap-1.5 transition">
-          <i class="fa-solid fa-magnifying-glass"></i> Check / Verify Name
-        </button>
-        <div id="usernameStatus" class="text-xs text-gray-400">
-          Username: <span id="playerName" class="font-bold text-white">Not Verified</span>
-        </div>
-      </div>
-    </section>
+  <script>
+    // Nanggi WhatsApp Number asida hapchinbiyu (Country code 91 ga loinana)
+    const WHATSAPP_NUMBER = "910000000000";
 
-    <!-- Step 3: Recharge Packs -->
-    <section class="mb-6">
-      <h3 class="text-xs uppercase tracking-wider text-yellow-400 font-bold mb-3 flex items-center gap-2">
-        <span class="w-5 h-5 rounded-full bg-yellow-400 text-black flex items-center justify-center text-xs">3</span>
-        Select Recharge Pack
-      </h3>
-      <div id="packsGrid" class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-        <!-- Packs dynamically populated -->
-      </div>
-    </section>
+    const products = [
+      { name: "5 Diamonds", oldPrice: 20, price: 12, stock: true },
+      { name: "11 Diamonds (10+1 Bonus)", oldPrice: 30, price: 23, stock: true },
+      { name: "22 Diamonds (20+2 Bonus)", oldPrice: 55, price: 45, stock: true },
+      { name: "Diamond 50+5 (1st Time Double)", oldPrice: 99, price: 82, stock: true },
+      { name: "Weekly Elite Package (Once a Week)", oldPrice: 99, price: 82, stock: true },
+      { name: "86 Diamonds (78+8 Bonus)", oldPrice: 149, price: 130, stock: true },
+      { name: "Weekly Diamond Pass", oldPrice: 188, price: 153, stock: true },
+      { name: "112 Diamonds (102+10 Bonus)", oldPrice: 225, price: 195, stock: false },
+      { name: "Diamond 150+15 (1st Time Double)", oldPrice: 299, price: 246, stock: true },
+      { name: "172 Diamonds (156+16 Bonus)", oldPrice: 310, price: 256, stock: true },
+      { name: "257 Diamonds (234+23 Bonus)", oldPrice: 450, price: 375, stock: true },
+      { name: "Diamond 250+25 (1st Time Double)", oldPrice: 499, price: 396, stock: true },
+      { name: "344 Diamonds (313+31 Bonus)", oldPrice: 600, price: 522, stock: true },
+      { name: "429 Diamonds (390+39 Bonus)", oldPrice: 705, price: 642, stock: true },
+      { name: "514 Diamonds (468+46 Bonus)", oldPrice: 999, price: 762, stock: true },
+      { name: "Twilight Pass", oldPrice: 1099, price: 845, stock: true }
+    ];
 
-    <!-- Step 4: Payment Method Selection -->
-    <section class="mb-6 bg-gray-900 p-5 rounded-2xl border border-gray-800">
-      <h3 class="text-xs uppercase tracking-wider text-yellow-400 font-bold mb-3 flex items-center gap-2">
-        <span class="w-5 h-5 rounded-full bg-yellow-400 text-black flex items-center justify-center text-xs">4</span>
-        Select Payment Method
-      </h3>
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-        <div onclick="selectPayment('Google Pay')" id="pay-gpay" class="payment-card border border-yellow-400 bg-yellow-400/10 p-3 rounded-xl text-center cursor-pointer font-semibold text-xs flex flex-col items-center gap-1.5">
-          <i class="fa-brands fa-google-pay text-2xl text-blue-400"></i>
-          <span>Google Pay</span>
-        </div>
-        <div onclick="selectPayment('PhonePe')" id="pay-phonepe" class="payment-card border border-gray-800 bg-gray-950 p-3 rounded-xl text-center cursor-pointer font-semibold text-xs flex flex-col items-center gap-1.5">
-          <i class="fa-solid fa-mobile-screen-button text-xl text-purple-400"></i>
-          <span>PhonePe</span>
-        </div>
-        <div onclick="selectPayment('Paytm UPI')" id="pay-paytm" class="payment-card border border-gray-800 bg-gray-950 p-3 rounded-xl text-center cursor-pointer font-semibold text-xs flex flex-col items-center gap-1.5">
-          <i class="fa-solid fa-wallet text-xl text-cyan-400"></i>
-          <span>Paytm UPI</span>
-        </div>
-        <div onclick="selectPayment('UPI QR Code')" id="pay-qr" class="payment-card border border-gray-800 bg-gray-950 p-3 rounded-xl text-center cursor-pointer font-semibold text-xs flex flex-col items-center gap-1.5">
-          <i class="fa-solid fa-qrcode text-xl text-green-400"></i>
-          <span>UPI QR Code</span>
-        </div>
-      </div>
-    </section>
+    let selectedPack = null;
 
-    <!-- Order Summary & Checkout -->
-    <section class="bg-gray-900 border border-gray-800 rounded-2xl p-5">
-      <div class="grid grid-cols-2 gap-4 pb-4 border-b border-gray-800 text-sm">
-        <div>
-          <span class="text-xs text-gray-400 block">Selected Pack:</span>
-          <span id="summaryPack" class="font-bold text-yellow-400">None selected</span>
-        </div>
-        <div class="text-right">
-          <span class="text-xs text-gray-400 block">Total Amount:</span>
-          <span id="summaryPrice" class="font-black text-xl text-white">₹0</span>
-        </div>
-      </div>
+    function renderProducts(list) {
+      const container = document.getElementById("productList");
+      document.getElementById("productCount").innerText = `${list.length} Packs`;
+      container.innerHTML = "";
 
-      <button onclick="sendOrderToWhatsApp()" class="mt-4 w-full bg-green-500 hover:bg-green-600 text-black font-extrabold py-3.5 rounded-xl shadow-lg shadow-green-500/20 text-sm flex items-center justify-center gap-2 transition">
-        <i class="fa-brands fa-whatsapp text-lg"></i>
-        Proceed to Order on WhatsApp
-      </button>
-    </section>
+      list.forEach((item, index) => {
+        const card = document.createElement("div");
+        card.className = "product-card";
+        card.innerHTML = `
+          <div class="product-left">
+            <div class="diamond-icon"><i class="fa-solid fa-gem"></i></div>
+            <div class="product-info">
+              <h4>${item.name}</h4>
+              ${!item.stock ? '<span class="badge-stock">Out of Stock</span>' : ''}
+            </div>
+          </div>
+          <div class="product-right">
+            <div class="price-box">
+              <span class="old-price">₹${item.oldPrice}</span>
+              <span class="new-price">₹${item.price}</span>
+            </div>
+            <button class="buy-btn" ${!item.stock ? "disabled" : ""} onclick="openCheckout('${item.name}', ${item.price})">
+              Buy
+            </button>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
 
-  </main>
+    function filterProducts() {
+      const q = document.getElementById("searchInput").value.toLowerCase();
+      const filtered = products.filter(p => p.name.toLowerCase().includes(q));
+      renderProducts(filtered);
+    }
 
-  <!-- Login Modal -->
-  <div id="loginModal" class="fixed inset-0 bg-black/75 backdrop-blur-sm hidden items-center justify-
+    function openCheckout(name, price) {
+      const uid = document.getElementById("playerId").value.trim();
+      const sid = document.getElementById("serverId").value.trim();
+
+      if (!uid || !sid) {
+        alert("Chanbiduna Player ID (UID) amasung Server ID hanna hapchinbiyu!");
+        document.getElementById("playerId").focus();
+        return;
+      }
+
+      selectedPack = { name, price, uid, sid };
+      document.getElementById("modalSummary").innerHTML =
+        `<strong>Pack:</strong> ${name} (₹${price})<br><strong>UID:</strong> ${uid} (${sid})`;
+      document.getElementById("checkoutModal").style.display = "flex";
+    }
+
+    function closeModal() {
+      document.getElementById("checkoutModal").style.display = "none";
+    }
+
+    function sendWhatsAppOrder() {
+      if (!selectedPack) return;
+      const msg = `*New MLBB Top-Up Order*%0A` +
+                  `• *Package:* ${selectedPack.name}%0A` +
+                  `• *Amount:* ₹${
